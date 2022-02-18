@@ -7,7 +7,8 @@
     "run": "node server.js",
     "dev": "nodemon server.js",
     "start": "node server.js",
-    "sass": "sass --watch public/compilate.sass:public/compilate.min.css --style compressed"
+    "sass": "sass --watch public/compilate.sass:public/compilate.min.css --style compressed",
+    "sass2": "sass --watch public/arseniy.sass:public/arseniy.min.css --style compressed"
   },
   "keywords": [],
   "author": "",
@@ -29,6 +30,7 @@
     "nodemailer": "^6.7.0",
     "nodemon": "^2.0.14",
     "request": "^2.88.2",
+    "sass": "^1.49.8",
     "sequelize": "^6.12.0-beta.1",
     "sharp": "^0.29.3"
   }
