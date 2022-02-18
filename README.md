@@ -1,1 +1,1 @@
-"# Trener" 
+"ConsStudio v2.0" 
