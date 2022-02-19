@@ -1,6 +1,36 @@
 .services
+  margin-top: 100px
+  &-button
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 230px
+    height: 50px
+    position: relative
+    padding: 10px 20px
+    background-color: #02031C
+    $border: 1px
+    border: solid $border transparent
+    border-radius: 50px
+    color: #14FFEC
+    background-clip: padding-box
+    text-decoration: none
+    &:before
+      content: ""
+      position: absolute
+      top: -1px
+      right: -1px
+      bottom: -1px
+      left: -1px
+      z-index: -1
+      margin: -1px
+      border-radius: inherit
+      background: linear-gradient(to bottom, #14FFEC, #8839FF)
+    &:hover
+      text-decoration: none
+      color: #14FFEC
   &-back__title
-    background: url("../../../images/services.png") no-repeat
+    background: url("/images/Services.png") no-repeat
     background-size: 320px 50px
     background-position-y: 0
     background-position-x: left
