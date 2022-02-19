@@ -228,11 +228,151 @@
 <section class="home__services pt-5">
     <div class="container">
         <div class="row">
-            <div class="col-lg-11 offset-lg-1 position-relative">
+            <div class="col-lg-11 offset-lg-1 position-relative mb-5">
                 <div class="home__services-title__background">
                     <h2 class="home__services-title text-uppercase">Наши услуги</h2>
                 </div>
                 <p class="home__services-subtitle f-16">Для достижения конкретных бизнес-целей ConsStudio разрабатывает популярные типы сайтов:</p>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="home__services-box">
+                    <div class="row justify-content-center">
+                        <h3 class="home__services-box__title text-center text-uppercase">Landing-page</h3>
+                    </div>
+                    <div class="row justify-content-center">
+                        <p class="home__services-box__subtitle text-center">Небольшой одностраничный сайт, полностью заточенный под то, чтобы попадающий на него клиент выполнил целевое действие.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="home__services-box">
+                    <div class="row justify-content-center">
+                        <h3 class="home__services-box__title text-center text-uppercase">Сайт-визитка</h3>
+                    </div>
+                    <div class="row justify-content-center">
+                        <p class="home__services-box__subtitle text-center">
+                            Основная цель - краткая передача информации о компании или персоне для привлечения внимания посетителей.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="home__services-box">
+                    <div class="row justify-content-center">
+                        <h3 class="home__services-box__title text-center text-uppercase">Корпоративный сайт</h3>
+                    </div>
+                    <div class="row justify-content-center">
+                        <p class="home__services-box__subtitle text-center">Сайт представляет собой своеобразную рекламную площадку, призванную привлекать новых клиентов.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="home__services-box">
+                    <div class="row justify-content-center">
+                        <h3 class="home__services-box__title text-center text-uppercase">Дизайн</h3>
+                    </div>
+                    <div class="row justify-content-center">
+                        <p class="home__services-box__subtitle text-center">Нарисуем дизайн для вашего будущего сайта с учетом всех ваших требований.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="home__services-box">
+                    <div class="row justify-content-center">
+                        <h3 class="home__services-box__title text-center text-uppercase">Интернет магазин</h3>
+                    </div>
+                    <div class="row justify-content-center">
+                        <p class="home__services-box__subtitle text-center">Современный инструмент для ведения своего бизнеса в онлайн режиме.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="home__services-box">
+                    <div class="row justify-content-center">
+                        <h3 class="home__services-box__title text-center text-uppercase">Блог</h3>
+                    </div>
+                    <div class="row justify-content-center">
+                        <p class="home__services-box__subtitle text-center">Ваш "личный дневник", с помощью которого вы можете делиться личным мнением, опытом, впечатлениями.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 d-flex justify-content-center">
+                <button class="universal__button-circle position-absolute">
+                    <span class="universal__button-circle-text text-uppercase f-18">Все услуги</span>
+                    <div class="universal__button-circle-wrapper">
+                        <div class="universal__button-circle-arrow"></div>
+                        <div class="universal__button-circle-border"></div>
+                        <div class="universal__button-circle-mask">
+                            <div class="universal__button-circle-small"></div>
+                        </div>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="form mt-5 pt-5">
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-lg-8 offset-lg-2 mb-5">
+                <div class="form-brief__box position-relative">
+                    <div class="form-brief__box-wrapper">
+                        <p class="form-brief__description text-center mb-3">Обсудим проект? Вы можете заполнить бриф  или оставить короткую заявку.</p>
+                        <a href="/brief" class="universal__button">
+                            Бриф
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 mt-3 mb-4">
+                <h2 class="form-title text-center text-uppercase">Короткая заявка</h2>
+            </div>
+            <div class="col-lg-6 offset-lg-3 position-relative">
+                <div class="form-robot position-absolute">
+                    <img src="/images/form-robot.png" alt="robot">
+                </div>
+                <form class="row form-order" action="/order">
+                    <div class="col-lg-6">
+                        <label for="orderName">Имя</label>
+                        <input class="form-control" type="text" name="orderName" id="orderName" placeholder="Ваше имя">
+                    </div>
+                    <div class="col-lg-6">
+                        <label for="orderSecondName">Фамилия</label>
+                        <input class="form-control" type="text" name="orderSecondName" id="orderSecondName" placeholder="Ваша фамилия">
+                    </div>
+                    <div class="col-lg-12">
+                        <label for="orderEmail">Email</label>
+                        <input class="form-control" type="text" name="orderEmail" id="orderEmail" placeholder="Ваша почта">
+                    </div>
+                    <div class="col-lg-12">
+                        <label for="orderPhone">Номер телефона</label>
+                        <input class="form-control" type="text" name="orderPhone" id="orderPhone" placeholder="Ваш номер телефона">
+                    </div>
+                    <div class="col-lg-12">
+                        <label for="orderService">Услуга</label>
+                        <select class="form-control" name="orderService" id="orderService">
+                            <option value="" disabled selected>Выберите услугу</option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <div class="col-lg-12">
+                        <label for="orderText">Расскажите о вашем проекте:</label>
+                        <textarea class="form-control" type="text" name="orderText" id="orderText" rows="5"></textarea>
+                    </div>
+                    <div class="col-lg-12">
+                        <p>* Обязательные поля</p>
+                    </div>
+                    <div class="col-lg-12">
+                        <p>Нажимая на кнопку “Оставить заявку”, вы соглашаетесь с <a href="/policy">Политикой конфиденциальности</a></p>
+                    </div>
+                    <div class="col-lg-12 d-flex justify-content-center mt-3">
+                        <button type="submit" class="form-order__button">
+                            Оставить заявку
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
