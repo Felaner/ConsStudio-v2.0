@@ -1,0 +1,102 @@
+.developing
+  position: relative
+  background: url("/images/developing-background.svg") no-repeat
+  background-size: 100%
+  background-position-y: -6px
+  height: 800px
+  z-index: -10
+
+  &-lines
+    background: url("/images/developing-lines.svg") no-repeat
+    background-position: center 100px
+
+  &-title
+    color: #FFFFFF
+    line-height: 130%
+    &__background
+      background: url("/images/Developing.png") no-repeat
+      background-size: 400px
+      background-position-y: 9px
+      background-position-x: 11px
+      padding-top: 30px
+      margin-top: -30px
+      padding-left: 20px
+      margin-left: -20px
+
+  &-circle
+    width: 150px
+    height: 150px
+    position: relative
+    background-color: #000000
+    $border: 1px
+    border: solid $border transparent
+    border-radius: 100%
+    color: #FFF
+    background-clip: padding-box
+    text-decoration: none
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      z-index: -1
+      margin: -$border
+      border-radius: inherit
+      background: linear-gradient(to bottom, #8839FF, #14FFEC)
+
+    &__1
+      margin-top: 55px
+      margin-left: -5px
+
+    &__2
+      margin-top: 130px
+      margin-left: -22px
+
+    &__3
+      margin-top: 30px
+      margin-left: -40px
+
+    &__4
+      margin-top: -80px
+      margin-left: -60px
+
+    img
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translateX(-50%) translateY(-50%)
+
+  &-process
+    &__title
+      color: #FFFFFF
+      text-align: center
+      font-size: 20px
+      font-weight: 700
+      margin-top: 20px
+      &-1
+        margin-left: -54px
+      &-2
+        margin-left: -92px
+      &-3
+        margin-left: -127px
+      &-4
+        margin-left: -165px
+    &__subtitle
+      color: #FEFEFE
+      text-align: center
+      font-size: 16px
+      font-weight: lighter
+      &-1
+        margin-left: -54px
+        padding: 0 15px
+      &-2
+        margin-left: -92px
+        padding: 0 25px
+      &-3
+        margin-left: -127px
+        padding: 0 45px
+      &-4
+        margin-left: -165px
+        padding: 0 70px
