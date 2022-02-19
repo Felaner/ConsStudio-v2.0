@@ -3,7 +3,21 @@
     color: #FEFEFE
     text-transform: uppercase
     line-height: 54px
+    position: relative
+  .title
+    &__background
+      position: absolute
+      bottom: 0
+      font-weight: bold
+      font-size: 72px
+      line-height: 72px
+      background-image: -webkit-linear-gradient(left, #E0F8F7, #585858, #fff)
+      background-image:    -moz-linear-gradient(left, #E0F8F7, #585858, #fff)
+      background-image:     -ms-linear-gradient(left, #E0F8F7, #585858, #fff)
+      background-image:      -o-linear-gradient(left, #E0F8F7, #585858, #fff)
+      background-image:         linear-gradient(to right, #E0F8F7, #585858, #fff)
+      color: transparent
+      -webkit-background-clip: text
   &__subtitle
-
     color: #FEFEFE
     line-height: 30px
