@@ -17,8 +17,11 @@
   &-card__wrapper
     margin-top: 60px
     .services-card
-      display: block
+      display: flex
+      flex-direction: column
+      justify-content: space-between
       max-width: 400px
+      min-height: 250px
       position: relative
       text-decoration: none
       border-radius: 20px
@@ -26,15 +29,16 @@
       backdrop-filter: blur(30px)
       padding: 20px 25px
       &__title
+        font-family: "Bebas Neue Regular"
         font-weight: bold
         font-size: 34px
-        line-height: 54px
         text-transform: uppercase
         background-image: linear-gradient(135deg, rgba(20,255,236,1) 0%, rgba(136,57,255,1) 100%)
         -webkit-background-clip: text
         -webkit-text-fill-color: transparent
       &__description
         color: #FEFEFE
+        font-family: "Source Sans Pro Regular"
         font-weight: 300
         font-size: 16px
         line-height: 28px

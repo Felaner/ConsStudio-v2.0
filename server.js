@@ -30,6 +30,7 @@ const app = express();
 
 const homeRoute = require('./routes/home');
 const servicesRoute = require('./routes/services');
+const landingRoute = require('./routes/landing');
 
 const keys = require('./keys');
 
@@ -99,6 +100,7 @@ app.use(express.urlencoded({extended: true}));
 
 app.use('/', homeRoute);
 app.use('/services', servicesRoute);
+app.use('/landing', landingRoute);
 
 app.use(errorHandler);
 
