@@ -9,7 +9,7 @@ img
   background: none
   box-shadow: unset
 
-.main
+.universal
   &__button
     position: relative
     padding: 10px 20px
@@ -31,6 +31,73 @@ img
       margin: -$border
       border-radius: inherit
       background: linear-gradient(to bottom, #14FFEC, #8839FF)
+
+  &__button-circle
+    $this: &
+    display: flex
+    cursor: pointer
+    align-items: center
+    padding-right: 65px
+    height: 80px
+    background: none
+    border: none
+    &-text
+      z-index: 1
+      font-size: 16px
+      margin-right: 20px
+      margin-bottom: 4px
+      color: #14FFEC
+    &-wrapper
+      position: relative
+      display: flex
+      align-items: center
+    &-arrow
+      display: flex
+      position: absolute
+      align-items: center
+      left: 12px
+      height: 3px
+      width: 75px
+      background-color: #14FFEC
+      &:after
+        content: ""
+        width: 0
+        height: 0
+        top: -5px
+        right: -7px
+        position: absolute
+        border-top: 7px solid transparent
+        border-bottom: 7px solid transparent
+        border-left: 7px solid #14FFEC
+    &-border
+      width: 50px
+      height: 50px
+      border-radius: 50%
+      border: 1px solid #FFFFFF
+      transition: transform 987ms
+    &-mask
+      width: 50px
+      height: 50px
+      position: absolute
+      border-radius: 50%
+      display: flex
+      align-items: center
+      justify-content: center
+      clip-path: circle(25px)
+      transition: -webkit-clip-path 987ms
+      transition: clip-path 987ms
+    &-small
+      width: 16px
+      height: 16px
+      border-radius: 50%
+      transform: translateX(63px)
+      background-color: #14FFEC
+    &:hover
+      #{$this}-border
+        transform: translateX(63px)
+      #{$this}-mask
+        clip-path: circle(25px at 85px)
+
 
 
 /**::-webkit-scrollbar {*/
