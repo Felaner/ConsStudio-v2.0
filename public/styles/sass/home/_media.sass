@@ -248,6 +248,70 @@
         color: #14FFEC
 
 @media (max-width: 991.98px)
+  .main
+    &-title
+      font-size: 26px
+      line-height: 180%
+      &__background
+        background-size: 340px
+        background-position-y: 38px
+    &-button
+      width: auto
+      right: unset
+      left: 50%
+      transform: translateX(-50%)
+      bottom: -100px
+
+  .developing
+    padding-top: 150px
+    background-size: 100% 131%
+    height: 800px
+    &-title
+      &__background
+        background-size: 310px
+    &-lines
+      background: none
+
+    &-process
+      &__mobile
+        &-title
+          color: #FFFFFF
+          text-align: center
+          font-size: 24px
+          margin-top: 5px
+
+        &-subtitle
+          color: #FFFFFF
+
+        &-circle
+          width: 100px
+          height: 100px
+          position: relative
+          background-color: #000000
+          $border: 1px
+          border: solid $border transparent
+          border-radius: 100%
+          color: #FFF
+          background-clip: padding-box
+          text-decoration: none
+          &:before
+            content: ''
+            position: absolute
+            top: 0
+            right: 0
+            bottom: 0
+            left: 0
+            z-index: -1
+            margin: -$border
+            border-radius: inherit
+            background: linear-gradient(to bottom, #8839FF, #14FFEC)
+
+          img
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translateX(-50%) translateY(-50%)
+
 
 @media (max-width: 767.98px)
 
