@@ -8,6 +8,7 @@
 
 
   .developing
+    background-size: 100% 102%
     &-lines
       background-position: 240px 119px
       background-size: 57%
@@ -52,12 +53,187 @@
         margin-left: 5px
 
 
+  .team
+    height: 850px
+    background-size: 100% 102%
+
+
   .home__services
     &-box
       width: 355px
 
 
 @media (max-width: 1199.98px)
+  .main
+    &-title
+      font-size: 26px
+      &__background
+        background-size: 400px
+        background-position-y: 25px
+
+
+  .developing
+    height: 650px
+    &-lines
+      background-position: 170px 100px
+      background-size: 60%
+    &-title
+      font-size: 28px
+      &__background
+        background-size: 300px
+        background-position-y: 13px
+    &-circle
+      width: 125px
+      height: 125px
+      &__1
+        margin-top: 55px
+        margin-left: -21px
+      &__2
+        margin-top: 130px
+        margin-left: -40px
+      &__3
+        margin-top: 30px
+        margin-left: -58px
+      &__4
+        margin-top: -80px
+        margin-left: -76px
+    &-process
+      &__subtitle
+        font-size: 14px
+
+
+  .skills
+    height: 535px
+    &-title
+      font-size: 28px
+      &__background
+        background-size: 220px
+        background-position-y: 6px
+    .container
+      background-size: 100%
+    &-subtitle
+      font-size: 14px
+
+    &-item
+      font-size: 18px
+      &__backend
+        margin-top: 90px
+        margin-left: 93px
+      &__frontend
+        margin-top: 69px
+        margin-left: 114px
+      &__databases
+        margin-top: 69px
+        margin-left: 93px
+      &__design
+        margin-top: 68px
+        margin-left: 77px
+
+
+  .call
+    height: 200px
+    &-wrapper
+      width: 17%
+    &-title
+      font-size: 28px
+    &-subtitle
+      font-size: 16px
+    &-form
+      height: 125px
+      input
+        height: 45px
+      button
+        margin-top: 1px
+
+
+  .team
+    height: 750px
+    background-size: 100% 93%
+    &-title
+      font-size: 28px
+      &__background
+        background-size: 230px
+    &-avatar
+      width: 120px
+      height: 120px
+      &__title
+        font-size: 22px
+      &__subtitle
+        font-size: 16px
+
+
+  .home__services
+    &-title
+      font-size: 28px
+      &__background
+        background-size: 230px
+    &-subtitle
+      color: #FEFEFE
+      margin-left: -8px
+      font-size: 16px
+    &-box
+      width: 299px
+      height: 200px
+      &__title
+        font-size: 26px
+
+
+  .form
+    &-title
+      font-size: 26px
+    &-robot
+      z-index: 100
+      right: -156px
+      top: 30px
+    &-order
+      background: #02031C
+      backdrop-filter: blur(10px)
+      border-radius: 20px
+      position: relative
+      padding: 48px 30px
+      $border: 1px
+      border: solid $border transparent
+      color: #FFF
+      background-clip: padding-box
+      text-decoration: none
+      &:before
+        content: ''
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        z-index: -1
+        margin: -$border
+        border-radius: inherit
+        background: linear-gradient(to bottom, #8839FF, #14FFEC)
+      label
+        font-family: "Bebas Neue Regular"
+        margin-bottom: 5px
+        font-size: 18px
+      input, select
+        border: 1px solid #FEFEFE
+        border-radius: 10px
+        background: none
+        height: 52px
+        margin-bottom: 20px
+        &::placeholder
+          padding-left: 25px
+          color: rgba(255, 255, 255, 0.6)
+          font-size: 14px
+      select
+        color: rgba(255, 255, 255, 0.6)
+      textarea
+        border: 1px solid #FEFEFE
+        border-radius: 10px
+        background: none
+        margin-bottom: 20px
+      &__button
+        padding: 10px 20px
+        background: none
+        border: solid 1px #14FFEC
+        border-radius: 50px
+        color: #14FFEC
 
 @media (max-width: 991.98px)
 
