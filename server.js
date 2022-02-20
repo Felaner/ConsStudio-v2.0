@@ -31,6 +31,8 @@ const app = express();
 const homeRoute = require('./routes/home');
 const servicesRoute = require('./routes/services');
 const landingRoute = require('./routes/landing');
+const siteCardRoute = require('./routes/siteCard');
+const corporateRoute = require('./routes/corporate');
 
 const keys = require('./keys');
 
@@ -101,6 +103,8 @@ app.use(express.urlencoded({extended: true}));
 app.use('/', homeRoute);
 app.use('/services', servicesRoute);
 app.use('/landing', landingRoute);
+app.use('/site-card', siteCardRoute);
+app.use('/corporate', corporateRoute);
 
 app.use(errorHandler);
 
