@@ -33,6 +33,9 @@ const servicesRoute = require('./routes/services');
 const landingRoute = require('./routes/landing');
 const siteCardRoute = require('./routes/siteCard');
 const corporateRoute = require('./routes/corporate');
+const designRoute = require('./routes/design');
+const storeRoute = require('./routes/store');
+const blogRoute = require('./routes/blog');
 
 const keys = require('./keys');
 
@@ -105,6 +108,9 @@ app.use('/services', servicesRoute);
 app.use('/landing', landingRoute);
 app.use('/site-card', siteCardRoute);
 app.use('/corporate', corporateRoute);
+app.use('/design', designRoute);
+app.use('/store', storeRoute);
+app.use('/blog', blogRoute);
 
 app.use(errorHandler);
 
