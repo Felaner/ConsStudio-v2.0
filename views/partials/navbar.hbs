@@ -1,13 +1,13 @@
-<nav class="navbar">
+<nav class="navbar d-lg-block d-none">
     <div class="container">
         <div class="row w-100">
-            <div class="col-lg-1 offset-xl-1">
+            <div class="col-lg-1 col-2 offset-xl-1">
                 <a class="navbar-brand" href="/">
                     <img src="/images/logo/logo.svg" width="60" height="75" class="d-inline-block align-top" alt="" loading="lazy">
                 </a>
             </div>
-            <div class="col-xl-5 col-lg-6 offset-lg-1 my-auto">
-                <ul class="navbar-nav flex-row justify-content-between">
+            <div class="col-xl-5 col-lg-7 offset-lg-1 my-auto d-none d-lg-block">
+                <ul class="navbar-nav flex-row justify-content-between text-uppercase">
                     <li class="nav-item">
                         <a class="nav-link" href="/">Главная</a>
                     </li>
@@ -22,11 +22,45 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-xl-3 col-lg-4 text-end my-auto">
+            <div class="col-xl-2 col-lg-3 offset-xl-1 offset-lg-0 text-end my-auto d-none d-lg-block">
                 <a href="" class="universal__button">
                     Заказать звонок
                 </a>
             </div>
         </div>
     </div>
+</nav>
+
+<div class="logo-wrap d-block d-lg-none">
+    <img src="/images/logo/logo.svg" width="60" height="75" class="d-inline-block align-top" alt="" loading="lazy">
+</div>
+
+<nav class="navbar-mobile d-block d-lg-none position-absolute vh-100">
+    <header class="cd-header">
+        <div class="header-wrapper">
+            <div class="nav-but-wrap">
+                <div class="menu-icon hover-target">
+                    <span class="menu-icon__line menu-icon__line-left"></span>
+                    <span class="menu-icon__line"></span>
+                    <span class="menu-icon__line menu-icon__line-right"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="nav">
+        <div class="nav__content">
+            <ul class="nav__list">
+                <li class="nav__list-item"><a href="/" class="hover-target">Главная</a></li>
+                <li class="nav__list-item"><a href="/services" class="hover-target">Услуги</a></li>
+                <li class="nav__list-item"><a href="/portfolio" class="hover-target">Портфолио</a></li>
+                <li class="nav__list-item"><a href="/contacts" class="hover-target">Контакты</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class='cursor' id="cursor"></div>
+    <div class='cursor2' id="cursor2"></div>
+    <div class='cursor3' id="cursor3"></div>
 </nav>
