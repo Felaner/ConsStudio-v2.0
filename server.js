@@ -36,6 +36,7 @@ const corporateRoute = require('./routes/corporate');
 const designRoute = require('./routes/design');
 const storeRoute = require('./routes/store');
 const blogRoute = require('./routes/blog');
+const portfolioRoute = require('./routes/portfolio');
 
 const keys = require('./keys');
 
@@ -111,6 +112,7 @@ app.use('/corporate', corporateRoute);
 app.use('/design', designRoute);
 app.use('/store', storeRoute);
 app.use('/blog', blogRoute);
+app.use('/portfolio', portfolioRoute);
 
 app.use(errorHandler);
 
