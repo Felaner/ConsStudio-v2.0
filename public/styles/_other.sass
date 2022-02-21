@@ -1,5 +1,4 @@
 body
-  overflow-x: hidden
   height: 100%
   background-color: #02031C
 img
@@ -13,14 +12,15 @@ img
   filter: blur(3px)
 
 *
-  font-family: 'Source Sans Pro Regular'
+  //outline: 1px solid red
+  font-family: 'Source Sans Pro Regular', sans-serif
 
 h1, h2, h3, h4, h5, h6
-  font-family: 'Bebas Neue Bold'
+  font-family: 'Bebas Neue Bold', sans-serif
 
 .universal
   &__button
-    font-family: "Bebas Neue Regular"
+    font-family: "Bebas Neue Regular", sans-serif
     letter-spacing: 2px
     position: relative
     padding: 12px 25px
@@ -111,7 +111,6 @@ h1, h2, h3, h4, h5, h6
         transform: translateX(63px)
       #{$this}-mask
         clip-path: circle(25px at 85px)
-
 
 
 /**::-webkit-scrollbar {*/

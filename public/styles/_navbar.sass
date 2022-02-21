@@ -4,11 +4,14 @@
   left: 40px
   top: 20px
   cursor: pointer
+  z-index: 1
 
 .navbar
+  &-nav
+    margin-left: -30px
   .nav-link
     color: #ffffff
-    font-family: 'Bebas Neue Regular'
+    font-family: 'Bebas Neue Regular', sans-serif
     letter-spacing: 2px
     &:hover
       color: #ffffff
@@ -46,9 +49,9 @@
     box-shadow: 0 0 12px rgba(255, 255, 255, 0.2)
 .cd-header
   position: fixed
-  width: 100%
+  width: 106px
   top: 0
-  left: 0
+  right: 0
   z-index: 100
 .header-wrapper
   position: relative
@@ -73,7 +76,7 @@
   height: 2px
   width: 30px
   display: block
-  background-color: #fff
+  background: linear-gradient(to bottom, #14FFEC, #8839FF)
   margin-bottom: 7px
   cursor: pointer
   -webkit-transition: background-color .5s ease, -webkit-transform .2s ease
@@ -110,6 +113,150 @@
   &:before
     -webkit-transition-delay: .2s
     transition-delay: .2s
+  &__eye
+    $this: &
+    position: absolute !important
+    left: 50%
+    transform: translateX(-50%) !important
+    width: 100%
+    height: 150px
+    &-box
+      cursor: pointer
+      z-index: 10
+      width: 65px
+      height: 34px
+      left: 50%
+      top: 50%
+      transform: translateX(-50%) translateY(-50%)
+    a
+      width: 25px !important
+      height: 25px !important
+      border-radius: 100% !important
+      padding: 0 !important
+      &:after
+        content: unset !important
+    &-up
+      &__line
+        position: absolute
+        top: 4px
+        left: 50%
+        transform: translateX(-50%) translateY(-50%)
+        z-index: -1
+        transition: all 1s ease
+    &-main
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translateX(-50%) translateY(-50%)
+    &-circle
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translateX(-50%) translateY(-50%)
+      transition: all 1.4s ease-in-out
+    &-inner
+      &__circle
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translateX(-50%) translateY(-50%)
+    &-plus
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translateX(-50%) translateY(-50%)
+      transition: all 1s ease-in-out
+    &-down
+      &__line
+        position: absolute
+        top: 30px
+        left: 50%
+        transform: translateX(-50%) translateY(-50%)
+        z-index: -1
+        transition: all 1s ease
+    &-email
+      top: 50%
+      left: 50%
+      transform: translateX(-50%) translateY(-50%)
+      z-index: -1
+      transition: all .6s ease !important
+      opacity: 0
+      img
+        position: absolute
+        left: 0
+        top: 0
+      &__active
+        opacity: 1
+        transform: translate(-58px, -45px)
+    &-phone
+      top: 50%
+      left: 50%
+      transform: translateX(-50%) translateY(-50%)
+      z-index: -1
+      transition: all .6s ease .2s !important
+      opacity: 0
+      img
+        position: absolute
+        left: 0
+        top: 0
+      &__active
+        opacity: 1
+        transform: translate(-50%, -67px)
+    &-map
+      top: 50%
+      left: 50%
+      transform: translateX(-50%) translateY(-50%)
+      z-index: -1
+      transition: all .6s ease .4s !important
+      opacity: 0
+      img
+        position: absolute
+        left: 0
+        top: 0
+      &__active
+        opacity: 1
+        transform: translate(32px, -45px)
+    &-whatsapp
+      top: 50%
+      left: 50%
+      transform: translateX(-50%) translateY(-50%)
+      z-index: -1
+      transition: all .6s ease .6s !important
+      opacity: 0
+      img
+        position: absolute
+        left: 0
+        top: 0
+      &__active
+        opacity: 1
+        transform: translate(-58px, 20px)
+    &-telegram
+      top: 50%
+      left: 50%
+      transform: translateX(-50%) translateY(-50%)
+      z-index: -1
+      transition: all .6s ease .8s !important
+      opacity: 0
+      img
+        position: absolute
+        left: 0
+        top: 0
+      &__active
+        opacity: 1
+        transform: translate(32px, 21px)
+
+    &-up
+      &__line
+        transform: translateX(-50%) translateY(-140%)
+    &-down
+      &__line
+        transform: translateX(-50%) translateY(25%)
+    &-plus
+      transform: translateX(-50%) translateY(-50%) rotate(405deg)
+    &-circle
+      transform: translateX(-50%) translateY(-50%) rotate(720deg)
+
+
 .nav:before, .nav:after
   content: ""
   position: fixed
@@ -127,7 +274,7 @@
 .nav__content
   position: fixed
   visibility: hidden
-  top: 50%
+  top: 30%
   margin-top: 20px
   -webkit-transform: translate(0%, -50%)
   transform: translate(0%, -50%)
@@ -147,8 +294,8 @@
   text-align: center
   color: #fff
   overflow: hidden
-  font-family: 'Montserrat', sans-serif
-  font-size: 8vh
+  font-family: 'Bebas Neue Regular', sans-serif
+  font-size: 5vh
   font-weight: 900
   line-height: 1.15
   letter-spacing: 3px

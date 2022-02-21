@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //         i.style.left = n.clientX + "px",
     //         i.style.top = n.clientY + "px"
     // });
+
     let t = document.getElementById("cursor"),
         e = document.getElementById("cursor2"),
         i = document.getElementById("cursor3");
@@ -32,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let menuItems = undefined;
         let all = undefined;
         let nav = undefined;
+        let scrollSkills
         const init = function init() {
             body = document.querySelector('body');
             menu = document.querySelector('.menu-icon');
@@ -66,4 +68,49 @@ document.addEventListener('DOMContentLoaded', () => {
         init();
     }
     App();
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const eyeButton = document.querySelector('.nav__eye')
+    const upLine = eyeButton.querySelector('.nav__eye-up__line'),
+        circle = eyeButton.querySelector('.nav__eye-circle'),
+        plus = eyeButton.querySelector('.nav__eye-plus'),
+        downLine = eyeButton.querySelector('.nav__eye-down__line'),
+        email = eyeButton.querySelector('.nav__eye-email'),
+        phone = eyeButton.querySelector('.nav__eye-phone'),
+        map = eyeButton.querySelector('.nav__eye-map'),
+        whatsapp = eyeButton.querySelector('.nav__eye-whatsapp'),
+        telegram = eyeButton.querySelector('.nav__eye-telegram');
+
+    let clicks = 0;
+    eyeButton.addEventListener('click', function () {
+        ++clicks
+        let start = Date.now();
+
+        let timer = setInterval(function() {
+            let timePassed = Date.now() - start;
+            if (clicks % 2 !== 0) {
+                circle.style.transform = 'translateX(-50%) translateY(-50%) rotate(360deg)';
+                plus.style.transform = 'translateX(-50%) translateY(-50%) rotate(405deg)';
+                downLine.style.transform = 'translateX(-50%) translateY(50%)';
+                upLine.style.transform = 'translateX(-50%) translateY(-150%)';
+                email.classList.add('nav__eye-email__active');
+                phone.classList.add('nav__eye-phone__active');
+                map.classList.add('nav__eye-map__active');
+                whatsapp.classList.add('nav__eye-whatsapp__active');
+                telegram.classList.add('nav__eye-telegram__active');
+            } else {
+                circle.style.transform = 'translateX(-50%) translateY(-50%) rotate(0deg)';
+                plus.style.transform = 'translateX(-50%) translateY(-50%) rotate(0deg)';
+                downLine.style.transform = 'translateX(-50%) translateY(-50%)';
+                upLine.style.transform = 'translateX(-50%) translateY(-50%)';
+                email.classList.remove('nav__eye-email__active');
+                phone.classList.remove('nav__eye-phone__active');
+                map.classList.remove('nav__eye-map__active');
+                whatsapp.classList.remove('nav__eye-whatsapp__active');
+                telegram.classList.remove('nav__eye-telegram__active');
+            }
+            if (timePassed > 2000) clearInterval(timer);
+        }, 20);
+    })
 });

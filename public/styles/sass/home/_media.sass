@@ -130,16 +130,16 @@
       font-size: 18px
       &__backend
         margin-top: 90px
-        margin-left: 93px
+        margin-left: 15px
       &__frontend
         margin-top: 69px
-        margin-left: 114px
+        margin-left: 36px
       &__databases
         margin-top: 69px
-        margin-left: 93px
+        margin-left: 15px
       &__design
         margin-top: 68px
-        margin-left: 77px
+        margin-left: -1px
 
 
   .call
@@ -193,10 +193,6 @@
   .form
     &-title
       font-size: 26px
-    &-robot
-      z-index: 100
-      right: -156px
-      top: 30px
     &-order
       background: #02031C
       backdrop-filter: blur(10px)
@@ -220,7 +216,7 @@
         border-radius: inherit
         background: linear-gradient(to bottom, #8839FF, #14FFEC)
       label
-        font-family: "Bebas Neue Regular"
+        font-family: "Bebas Neue Regular", sans-serif
         margin-bottom: 5px
         font-size: 18px
       input, select
@@ -267,6 +263,7 @@
     background-size: 100% 131%
     height: 800px
     &-title
+      font-size: 24px
       &__background
         background-size: 310px
     &-lines
@@ -312,7 +309,404 @@
             top: 50%
             transform: translateX(-50%) translateY(-50%)
 
+  .skills
+    height: 430px
+    &-wrapper
+      top: 55%
+    .container
+      background-position: -38px 0px
+    &-title
+      font-size: 24px
+    &-subtitle
+      font-size: 12px
+    &-item
+      font-size: 16px
+      &__backend
+        margin-top: 137px
+        margin-left: 41px
+        img
+          height: 40px
+      &__frontend
+        margin-top: 48px
+        margin-left: 57px
+        img
+          height: 35px
+      &__databases
+        margin-top: 46px
+        margin-left: 41px
+        img
+          height: 40px
+      &__design
+        margin-top: 46px
+        margin-left: -12px
+        img
+          height: 30px
+
+  .call
+    height: 168px
+    &-wrapper
+      width: 24%
+    &-title
+      font-size: 24px
+    &-subtitle
+      font-size: 14px
+    &-form
+      height: 99px
+      margin-top: 35px
+      button
+        img
+          width: 75px
+          margin-top: 11px
+
+  .team
+    height: 640px
+    &-title
+      font-size: 24px
+    &-avatar
+      width: 100px
+      height: 100px
+      &__title
+        font-size: 20px
+      &__subtitle
+        font-size: 14px
+    &-arrow
+      padding: 8px
+      img
+        width: 36px
+
+  .home__services
+    &-title
+      font-size: 24px
+    &-subtitle
+      font-size: 14px
+    &-box
+      width: 100%
+      &__title
+        font-size: 24px
+
+  .form
+    &-brief
+      &__box
+        height: 185px
+    &-title
+      font-size: 24px
+    &-robot
+      right: -83px
+      top: 30px
+      width: 120px
+      img
+        width: 100%
+    &-order
+      label
+        font-size: 16px
+      input, select
+        height: 45px
+        margin-bottom: 15px
 
 @media (max-width: 767.98px)
+  .main
+    &-title
+      font-size: 24px
+      letter-spacing: 5px
+      &__background
+        background-size: 260px
+        background-position-y: 41px
+    &-subtitle
+      font-size: 14px
+    &-button
+      width: auto
+      right: unset
+      left: 50%
+      transform: translateX(-50%)
+      bottom: -100px
+
+  .developing
+    background-size: 100% 100%
+    background-position-y: 68px
+    &-title
+      font-size: 24px
+      &__background
+        background-size: 280px
+
+    &-process
+      &__mobile
+        &-title
+          font-size: 20px
+        &-subtitle
+          font-size: 14px
+          -ms-hyphens: auto
+          -webkit-hyphens: auto
+          hyphens: auto
+        &-circle
+          width: 80px
+          height: 80px
+          img
+            width: 30px
+
+  .skills
+    height: 300px
+    .container
+      background-position: -38px -25px
+    &-title
+      font-size: 24px
+      &__background
+        background-size: 165px
+    &-item
+      font-size: 14px
+      &__backend
+        margin-top: 77px
+        margin-left: 21px
+        img
+          height: 35px
+      &__frontend
+        margin-top: 31px
+        margin-left: 33px
+        img
+          height: 30px
+      &__databases
+        margin-top: 30px
+        margin-left: 21px
+        img
+          height: 35px
+      &__design
+        margin-top: 30px
+        margin-left: -19px
+        img
+          height: 25px
+
+  .call
+    height: 168px
+    &-wrapper
+      width: 25%
+    &-title
+      font-size: 22px
+    &-subtitle
+      font-size: 12px
+    &-form
+      button
+        img
+          width: 60px
+          margin-top: 16px
+
+  .team
+    height: 580px
+    &-title
+      font-size: 24px
+      &__background
+        background-size: 225px
+    &-subtitle
+      font-size: 14px
+    &-avatar
+      width: 90px
+      height: 90px
+      &__title
+        font-size: 18px
+      &__subtitle
+        font-size: 12px
+
+  .home__services
+    &-title
+      font-size: 24px
+      &__background
+        background-size: 170px
+    &-subtitle
+      font-size: 14px
+    &-box
+      width: 100%
+      height: 210px
+      &__title
+        font-size: 22px
+      &__subtitle
+        font-size: 12px
+
+  .form
+    &-brief
+      &__box
+        height: 185px
+        &-wrapper
+          padding: 0 10px
+      &__description
+        font-size: 14px
+    &-title
+      font-size: 24px
+    &-robot
+      right: -57px
+      width: 100px
+    &-order
+      margin: 0
+      padding: 25px 20px
+      label
+        font-size: 14px
+      input, select
+        height: 40px
+        margin-bottom: 10px
+      p
+        font-size: 14px
 
 @media (max-width: 575.98px)
+  .main
+    position: relative
+    padding-bottom: 130px
+    &-mobile
+      &__background
+        position: absolute
+        background: url("/images/pc.png") no-repeat
+        background-size: 50%
+        background-position: 30px 100px
+        filter: blur(5px)
+        left: 0
+        right: 0
+        width: 100%
+        height: 100%
+        &:after
+          content: ''
+          position: absolute
+          top: 0
+          left: 0
+          right: 0
+          bottom: 0
+          width: 100%
+          height: 100%
+          background: rgba(2, 3, 28, 0.5)
+    &-title
+      font-size: 26px
+      letter-spacing: 3px
+      padding: 0 15px
+      &__background
+        background-size: 210px
+        background-position-y: 54px
+        background-position-x: calc(100% - 15px)
+    &-subtitle
+      padding: 0 15px
+      font-size: 14px
+    &-button
+      width: auto
+      right: unset
+      left: 50%
+      transform: translateX(-50%)
+      bottom: -100px
+      .universal__button-circle-text
+        font-size: 14px
+        white-space: nowrap
+
+  .developing
+    background-size: 100% 80%
+    background-position-y: 68px
+    padding-top: 0
+    height: 450px
+    &-title
+      font-size: 24px
+      &__background
+        background-position-x: center
+        margin-left: 0
+        padding-left: 0
+    .carousel-indicators
+      bottom: -50px
+    .carousel-indicators [data-bs-target]
+      width: 5px
+      height: 5px
+      border-radius: 100%
+
+  .skills
+    height: 270px
+    .container
+      background: none
+    &-title
+      font-size: 24px
+      &__background
+        background-position-x: center
+        margin-left: 0
+        padding-left: 0
+    &-wrapper
+      padding-right: 15px
+      top: unset
+      transform: unset
+    .carousel
+      margin-top: 55px
+      h3
+        color: #FFFFFF
+    .carousel-control-next, .carousel-control-prev
+      position: absolute
+      top: 15px
+
+  .call
+    height: 272px
+    &-wrapper
+      display: block
+      position: relative
+      transform: unset
+      width: 100%
+      top: unset
+    &-title
+      margin-top: 20px
+      font-size: 22px
+    &-subtitle
+      font-size: 12px
+      margin-bottom: 15px
+    &-form
+      margin-top: 0
+      button
+        img
+          width: 60px
+          margin-top: 11px
+
+  .team
+    height: 450px
+    &-title
+      font-size: 24px
+      text-align: center
+      &__background
+        background-position-x: center
+        margin-left: 0
+        padding-left: 0
+    &-subtitle
+      text-align: center
+      font-size: 14px
+    &-scroll
+      &__wrapper
+        -webkit-overflow-scrolling: touch
+        overflow-x: scroll
+        overflow-y: hidden
+        white-space: nowrap
+        scrollbar-width: none
+        -ms-overflow-style: none
+        &::-webkit-scrollbar
+          display: none
+        .col-5
+          display: inline-block
+        &-avatar
+          width: auto
+          height: 90px
+          &__title
+            color: #FFFFFF
+            margin-top: 5px
+            font-size: 18px
+          &__subtitle
+            color: #FFFFFF
+            width: 80%
+            font-size: 12px
+            white-space: normal
+
+  .home__services
+    &-title
+      font-size: 24px
+      text-align: center
+      &__background
+        background-position-x: center
+        margin-left: 0
+        padding-left: 0
+    &-subtitle
+      text-align: center
+      font-size: 14px
+    &-box
+      height: 180px
+      &__title
+        font-size: 16px
+      &__subtitle
+        font-size: 14px
+    .universal__button-circle-text
+      font-size: 14px
+
+  .form
+    &-order
+      padding: 25px 5px

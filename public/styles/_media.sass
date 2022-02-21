@@ -6,6 +6,13 @@
     height: 280px
     &-list
       margin-top: 57px
+      &__item
+        &-contacts
+          li
+            &:first-child
+              margin-left: -5px
+            &:last-child
+              margin-right: -5px
     &-to
       &__up
         width: 75px
@@ -20,11 +27,33 @@
     &-button
       &__wrapper
         .universal__button
-          padding: 10px 0
+          padding: 10px 25px
+          width: auto
 
 @media (max-width: 991.98px)
+  .footer
+    height: 200px
+    &-copyright
+      bottom: -10px
 
 @media (max-width: 767.98px)
+  .footer
+    height: 170px
+    &-logo
+      height: 80px
+    &-list
+      margin-top: 35px
+      &__item
+        a
+          font-size: 16px
 
 @media (max-width: 575.98px)
+  .footer
+    height: 356px
+    &-to__up
+      width: 45px
+      &-wrapper
+        height: 25%
+    &-list
+      margin-top: 20px
 

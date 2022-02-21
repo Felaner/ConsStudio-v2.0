@@ -1,14 +1,15 @@
 <section class="main pt-4 pb-xxl-5">
+    <div class="main-mobile__background d-block d-sm-none"></div>
     <div class="container mt-lg-0 mt-5">
         <div class="row position-relative pt-5">
-            <div class="col-sm-5 mt-lg-0 mt-5">
+            <div class="col-sm-5 mt-lg-0 mt-5 d-none d-sm-block">
                 <img src="/images/pc.png" alt="pc" class="w-100">
             </div>
-            <div class="col-lg-5 col-sm-7 offset-lg-2 offset-sm-0 p-0 my-lg-auto mt-sm-5 mt-lg-0">
+            <div class="col-lg-5 col-sm-7 offset-lg-2 offset-sm-0 p-0 my-lg-auto mt-sm-5">
                 <div class="main-title__background mt-sm-4 mt-lg-0">
                     <h1 class="main-title text-end text-uppercase">Студия веб-разработки<br>Consequat</h1>
                 </div>
-                <p class="main-subtitle text-end mt-lg-5 mt-lg-4 ps-lg-0 ps-sm-4">Наша организация специфицируется на создании сайтов. Мы создадим для вас уникальный проект с нуля или же доработаем действующий. У нас работают лучшие специалисты, которые любят свое дело.</p>
+                <p class="main-subtitle text-end mt-lg-5 mt-lg-4 ps-lg-0 ps-sm-4">Наша организация специфицируется на создании сайтов. Мы создадим для вас уникальный проект с нуля или же доработаем действующий. <span class="d-none d-md-inline">У нас работают лучшие специалисты, которые любят свое дело.</span></p>
             </div>
             <button class="main-button universal__button-circle position-absolute">
                 <span class="universal__button-circle-text">Оставить заявку</span>
@@ -29,11 +30,11 @@
         <div class="row position-relative developing-lines">
             <div class="col-lg-5 offset-lg-1">
                 <div class="developing-title__background">
-                    <h2 class="developing-title text-start text-uppercase">Процесс разработки<br>вашего проекта</h2>
+                    <h2 class="developing-title text-sm-start text-center text-uppercase">Процесс разработки<br>вашего проекта</h2>
                 </div>
             </div>
             <div class="col-lg-12">
-                <div class="row">
+                <div class="row d-none d-sm-flex">
                     <div class="col-lg-2 col-sm-6 offset-lg-1">
                         <div class="developing-process d-lg-block d-none">
                             <div class="developing-circle developing-circle__1">
@@ -46,13 +47,13 @@
 <!--                        LAPTOP-->
                         <div class="developing-process__mobile d-block d-lg-none mt-5">
                             <div class="row">
-                                <div class="col-4">
-                                    <div class="developing-process__mobile-circle">
+                                <div class="col-md-4 col-sm-5">
+                                    <div class="developing-process__mobile-circle mx-auto">
                                         <img src="/images/developing-brif.svg" alt="brif">
                                     </div>
                                     <h3 class="developing-process__mobile-title">Бриф</h3>
                                 </div>
-                                <div class="col-8">
+                                <div class="col-md-8 col-sm-7">
                                     <p class="developing-process__mobile-subtitle">Знакомство и обмен информацией. Мы высылаем шаблон с вопросами. Получив заполненный бриф, мы внимательно знакомимся с ним.</p>
                                 </div>
                             </div>
@@ -70,13 +71,13 @@
                         <!--                        LAPTOP-->
                         <div class="developing-process__mobile d-block d-lg-none mt-5">
                             <div class="row">
-                                <div class="col-4">
-                                    <div class="developing-process__mobile-circle">
+                                <div class="col-md-4 col-sm-5">
+                                    <div class="developing-process__mobile-circle mx-auto">
                                         <img src="/images/developing-design.svg" alt="design">
                                     </div>
                                     <h3 class="developing-process__mobile-title">Дизайн</h3>
                                 </div>
-                                <div class="col-8">
+                                <div class="col-md-8 col-sm-7">
                                     <p class="developing-process__mobile-subtitle">Мы создаем прототипы для всех страниц, а так же при необходимости разрабатываем адаптивный дизайн.</p>
                                 </div>
                             </div>
@@ -94,13 +95,13 @@
                         <!--                        LAPTOP-->
                         <div class="developing-process__mobile d-block d-lg-none mt-5">
                             <div class="row">
-                                <div class="col-4">
-                                    <div class="developing-process__mobile-circle">
+                                <div class="col-md-4 col-sm-5">
+                                    <div class="developing-process__mobile-circle mx-auto">
                                         <img src="/images/developing-dev.svg" alt="developing">
                                     </div>
                                     <h3 class="developing-process__mobile-title">Разработка</h3>
                                 </div>
-                                <div class="col-8">
+                                <div class="col-md-8 col-sm-7">
                                     <p class="developing-process__mobile-subtitle">На этапе технических работ все реализуется в виде кода. Далее идет наполнение контентом. Все, что сделано в процессе разработки, тестируется.</p>
                                 </div>
                             </div>
@@ -118,14 +119,94 @@
                         <!--                        LAPTOP-->
                         <div class="developing-process__mobile d-block d-lg-none mt-5">
                             <div class="row">
-                                <div class="col-4">
-                                    <div class="developing-process__mobile-circle">
+                                <div class="col-md-4 col-sm-5">
+                                    <div class="developing-process__mobile-circle mx-auto">
                                         <img src="/images/developing-start.svg" alt="start">
                                     </div>
                                     <h3 class="developing-process__mobile-title">Запуск</h3>
                                 </div>
-                                <div class="col-8">
+                                <div class="col-md-8 col-sm-7">
                                     <p class="developing-process__mobile-subtitle">Перед запуском проект подвергается повторному тестированию. После этого сайт переносится на хостинг и подключается домен.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row d-sm-none d-block">
+                    <div id="homeMobileCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators mt-5">
+                            <button type="button" data-bs-target="#homeMobileCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#homeMobileCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#homeMobileCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#homeMobileCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="col-12">
+                                    <div class="developing-process__mobile d-block d-lg-none mt-5">
+                                        <div class="row">
+                                            <div class="col-5">
+                                                <div class="developing-process__mobile-circle mx-auto">
+                                                    <img src="/images/developing-brif.svg" alt="brif">
+                                                </div>
+                                                <h3 class="developing-process__mobile-title">Бриф</h3>
+                                            </div>
+                                            <div class="col-7">
+                                                <p class="developing-process__mobile-subtitle">Знакомство и обмен информацией. Мы высылаем шаблон с вопросами. Получив заполненный бриф, мы внимательно знакомимся с ним.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-12">
+                                    <div class="developing-process__mobile d-block d-lg-none mt-5">
+                                        <div class="row">
+                                            <div class="col-5">
+                                                <div class="developing-process__mobile-circle mx-auto">
+                                                    <img src="/images/developing-design.svg" alt="design">
+                                                </div>
+                                                <h3 class="developing-process__mobile-title">Дизайн</h3>
+                                            </div>
+                                            <div class="col-7">
+                                                <p class="developing-process__mobile-subtitle">Мы создаем прототипы для всех страниц, а так же при необходимости разрабатываем адаптивный дизайн.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-12">
+                                    <div class="developing-process__mobile d-block d-lg-none mt-5">
+                                        <div class="row">
+                                            <div class="col-5">
+                                                <div class="developing-process__mobile-circle mx-auto">
+                                                    <img src="/images/developing-dev.svg" alt="developing">
+                                                </div>
+                                                <h3 class="developing-process__mobile-title">Разработка</h3>
+                                            </div>
+                                            <div class="col-7">
+                                                <p class="developing-process__mobile-subtitle">На этапе технических работ все реализуется в виде кода. Далее идет наполнение контентом. Все, что сделано в процессе разработки, тестируется.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-12">
+                                    <div class="developing-process__mobile d-block d-lg-none mt-5">
+                                        <div class="row">
+                                            <div class="col-5">
+                                                <div class="developing-process__mobile-circle mx-auto">
+                                                    <img src="/images/developing-start.svg" alt="start">
+                                                </div>
+                                                <h3 class="developing-process__mobile-title">Запуск</h3>
+                                            </div>
+                                            <div class="col-7">
+                                                <p class="developing-process__mobile-subtitle">Перед запуском проект подвергается повторному тестированию. После этого сайт переносится на хостинг и подключается домен.</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -137,80 +218,151 @@
 </section>
 
 
-<section class="skills mt-xl-5 mt-0">
-    <div class="container pt-5 h-100">
+<section class="skills mt-lg-5 mt-sm-0 mt-5 mb-sm-5">
+    <div class="container pt-lg-5 h-100">
         <div class="row position-relative h-100">
-            <div class="col-lg-3 offset-xl-1 position-relative">
-                <div class="skills-wrapper w-100">
+            <div class="col-md-3 col-sm-4 offset-md-1 position-relative p-0">
+                <div class="skills-wrapper w-100 p-0">
                     <div class="skills-title__background">
-                        <h2 class="skills-title text-uppercase">При помощи чего мы<br>создаем сайты?</h2>
+                        <h2 class="skills-title text-uppercase text-center text-sm-start">При помощи чего мы<br>создаем сайты?</h2>
                     </div>
-                    <p class="skills-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p class="skills-subtitle d-none d-sm-block">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
             </div>
-            <div class="col-lg-8">
+            <div class="col-sm-8 d-sm-block d-none">
                 <div class="row">
-                    <div class="col-lg-12 offset-lg-1">
+                    <div class="col-lg-11 offset-lg-1">
                         <h3 class="skills-item skills-item__backend">Backend
                             <span class="position-absolute">
-                                <img src="/images/skills-nodejs.svg" alt="node.js" class="ms-3">
-                                <img src="/images/skills-expressjs.svg" alt="express.js" class="ms-3">
+                                <img src="/images/skills-nodejs.svg" alt="node.js" class="ms-lg-3 ms-2">
+                                <img src="/images/skills-expressjs.svg" alt="express.js" class="ms-lg-3 ms-2">
                             </span>
                         </h3>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-12 offset-lg-1">
+                    <div class="col-lg-11 offset-lg-1">
                         <h3 class="skills-item skills-item__frontend">Frontend
                             <span class="position-absolute">
-                                <img src="/images/skills-html.svg" alt="html" class="ms-3">
-                                <img src="/images/skills-bootstrap.svg" alt="bootstrap" class="ms-3">
+                                <img src="/images/skills-html.svg" alt="html" class="ms-lg-3 ms-2">
+                                <img src="/images/skills-bootstrap.svg" alt="bootstrap" class="ms-lg-3 ms-2">
                             </span>
                         </h3>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-12 offset-lg-1">
+                    <div class="col-lg-11 offset-lg-1">
                         <h3 class="skills-item skills-item__databases">Databases
                             <span class="position-absolute">
-                                <img src="/images/skills-mysql.svg" alt="mysql" class="ms-3">
-                                <img src="/images/skills-mongodb.svg" alt="mongodb" class="ms-3">
+                                <img src="/images/skills-mysql.svg" alt="mysql" class="ms-lg-3 ms-2">
+                                <img src="/images/skills-mongodb.svg" alt="mongodb" class="ms-lg-3 ms-2">
                             </span>
                         </h3>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-11">
                         <h3 class="skills-item skills-item__design">UI/UX
                             <span class="position-absolute">
-                                <img src="/images/skills-figma.svg" alt="figma" class="ms-3">
-                                <img src="/images/skills-photoshop.svg" alt="photoshop" class="ms-3">
-                                <img src="/images/skills-illustrator.svg" alt="illustrator" class="ms-3">
+                                <img src="/images/skills-figma.svg" alt="figma" class="ms-lg-3 ms-2">
+                                <img src="/images/skills-photoshop.svg" alt="photoshop" class="ms-lg-3 ms-2">
+                                <img src="/images/skills-illustrator.svg" alt="illustrator" class="ms-lg-3 ms-2">
                             </span>
                         </h3>
                     </div>
+                </div>
+            </div>
+            <div class="col-12 d-block d-sm-none">
+                <div id="homeSkillsCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-10 offset-1">
+                                    <div class="row">
+                                        <h3 class="text-center">Backend</h3>
+                                    </div>
+                                    <ul class="row list-inline">
+                                        <li class="col-6 d-flex justify-content-center"><img src="/images/skills-nodejs.svg" alt="node.js" class="ms-2"></li>
+                                        <li class="col-6 d-flex justify-content-center"><img src="/images/skills-expressjs.svg" alt="express.js" class="ms-2"></li>
+                                    </ul>
+                                </div>
+                                <div class="col-12"></div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-10 offset-1">
+                                    <div class="row">
+                                        <h3 class="text-center">Frontend</h3>
+                                    </div>
+                                    <ul class="row list-inline">
+                                        <li class="col-6 d-flex justify-content-center"><img src="/images/skills-html.svg" alt="html5" class="ms-2"></li>
+                                        <li class="col-6 d-flex justify-content-center"><img src="/images/skills-bootstrap.svg" alt="bootstrap5" class="ms-2"></li>
+                                    </ul>
+                                </div>
+                                <div class="col-12"></div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-10 offset-1">
+                                    <div class="row">
+                                        <h3 class="text-center">Databases</h3>
+                                    </div>
+                                    <ul class="row list-inline">
+                                        <li class="col-6 d-flex justify-content-center"><img src="/images/skills-mysql.svg" alt="mysql" class="ms-2"></li>
+                                        <li class="col-6 d-flex justify-content-center"><img src="/images/skills-mongodb.svg" alt="mongodb" class="ms-2"></li>
+                                    </ul>
+                                </div>
+                                <div class="col-12"></div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-10 offset-1">
+                                    <div class="row">
+                                        <h3 class="text-center">Design</h3>
+                                    </div>
+                                    <ul class="row list-inline">
+                                        <li class="col-6 d-flex justify-content-center"><img src="/images/skills-figma.svg" alt="figma" class="ms-2"></li>
+                                        <li class="col-6 d-flex justify-content-center"><img src="/images/skills-photoshop.svg" alt="photoshop" class="ms-2"></li>
+                                        <li class="col-12 d-flex justify-content-center"><img src="/images/skills-illustrator.svg" alt="illustrator" class="ms-2"></li>
+                                    </ul>
+                                </div>
+                                <div class="col-12"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#homeSkillsCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#homeSkillsCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="call mt-5">
+<section class="call">
     <div class="container">
         <div class="row">
-            <div class="col-lg-3 offset-lg-1">
+            <div class="col-lg-3 col-sm-4 col-12 offset-lg-1">
                 <div class="call-wrapper">
                     <h2 class="call-title text-uppercase">Заказать звонок</h2>
                     <p class="call-subtitle">Заполните форму, мы Вам перезвоним</p>
                 </div>
             </div>
-            <div class="col-lg-7">
+            <div class="col-lg-7 col-sm-8 col-12">
                 <form class="call-form row" action="/call" method="post">
-                    <div class="col-lg-10">
+                    <div class="col-lg-10 col-sm-9">
                         <input class="form-control mb-2" type="text" name="callName" id="callName" placeholder="Ваше имя">
                         <input class="form-control" type="text" name="callPhone" id="callPhone" placeholder="Ваш номер телефона">
                     </div>
-                    <div class="col-lg-2">
+                    <div class="col-lg-2 col-sm-3 col-12 d-flex d-sm-block justify-content-center">
                         <button type="submit"><img src="/images/call-button.png" alt="submit"></button>
                     </div>
                 </form>
@@ -221,16 +373,16 @@
 
 <section class="team pt-xl-5">
     <div class="container">
-        <div class="row mt-5 pt-xl-5">
-            <div class="col-lg-5 offset-lg-1 position-relative">
+        <div class="row mt-sm-5 pt-xl-5">
+            <div class="col-lg-5 col-sm-12 offset-lg-1 position-relative">
                 <div class="team-title__background mt-5">
                     <h2 class="team-title text-uppercase">Команда</h2>
                 </div>
                 <p class="team-subtitle">У нас работают лучшие специалисты, которые любят свое дело.</p>
             </div>
-            <div class="col-lg-10 offset-lg-1 mt-5">
+            <div class="col-lg-10 col-sm-12 offset-lg-1 mt-5 d-none d-sm-block">
                 <div class="row justify-content-between">
-                    <div class="col-lg-3">
+                    <div class="col-sm-3">
                         <div class="row justify-content-center">
                             <img class="team-avatar" src="/images/team-sasha.svg" alt="sasha">
                         </div>
@@ -241,7 +393,7 @@
                             <p class="team-avatar__subtitle text-center">Директор отдела продаж</p>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-sm-3">
                         <div class="row justify-content-center">
                             <img class="team-avatar" src="/images/team-gera.svg" alt="gera">
                         </div>
@@ -249,10 +401,10 @@
                             <h4 class="team-avatar__title text-center">Гера</h4>
                         </div>
                         <div class="row justify-content-center">
-                            <p class="team-avatar__subtitle text-center">UI/UX Designer</p>
+                            <p class="team-avatar__subtitle text-center">UI/UX Дизайнер</p>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-sm-3">
                         <div class="row justify-content-center">
                             <img class="team-avatar" src="/images/team-arseniy.svg" alt="arseniy">
                         </div>
@@ -260,10 +412,10 @@
                             <h4 class="team-avatar__title text-center">Арсений</h4>
                         </div>
                         <div class="row justify-content-center">
-                            <p class="team-avatar__subtitle text-center">Frontend developer</p>
+                            <p class="team-avatar__subtitle text-center">Frontend разработчик</p>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-sm-3">
                         <div class="row justify-content-center">
                             <img class="team-avatar" src="/images/team-kirill.svg" alt="kirill">
                         </div>
@@ -271,15 +423,61 @@
                             <h4 class="team-avatar__title text-center">Кирилл</h4>
                         </div>
                         <div class="row justify-content-center">
-                            <p class="team-avatar__subtitle text-center">Frontend / backend developer</p>
+                            <p class="team-avatar__subtitle text-center">Frontend / backend разработчик</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-12 d-flex justify-content-center mt-xl-5 pt-5">
+            <div class="col-lg-12 d-none d-sm-flex justify-content-center mt-xl-5 pt-md-5 pt-sm-3">
                 <a class="team-arrow" href="#">
                     <img src="/images/team-arrow.svg" alt="arrow">
                 </a>
+            </div>
+        </div>
+    </div>
+    <div class="team-scroll__wrapper d-block d-sm-none">
+        <div class="col-5">
+            <div class="row justify-content-center">
+                <img class="team-scroll__wrapper-avatar" src="/images/team-sasha.svg" alt="sasha">
+            </div>
+            <div class="row justify-content-center">
+                <h4 class="team-scroll__wrapper-avatar__title text-center">Александра</h4>
+            </div>
+            <div class="row justify-content-center">
+                <p class="team-scroll__wrapper-avatar__subtitle text-center">Директор отдела продаж</p>
+            </div>
+        </div>
+        <div class="col-5">
+            <div class="row justify-content-center">
+                <img class="team-scroll__wrapper-avatar" src="/images/team-gera.svg" alt="gera">
+            </div>
+            <div class="row justify-content-center">
+                <h4 class="team-scroll__wrapper-avatar__title text-center">Гера</h4>
+            </div>
+            <div class="row justify-content-center">
+                <p class="team-scroll__wrapper-avatar__subtitle text-center">UI/UX Дизайнер</p>
+            </div>
+        </div>
+        <div class="col-5">
+            <div class="row justify-content-center">
+                <img class="team-scroll__wrapper-avatar" src="/images/team-arseniy.svg" alt="arseniy">
+            </div>
+            <div class="row justify-content-center">
+                <h4 class="team-scroll__wrapper-avatar__title text-center">Арсений</h4>
+            </div>
+            <div class="row justify-content-center">
+                <p class="team-scroll__wrapper-avatar__subtitle text-center">Frontend разработчик</p>
+            </div>
+        </div>
+        <div class="col-5">
+            <div class="row justify-content-center">
+                <img class="team-scroll__wrapper-avatar" src="/images/team-kirill.svg" alt="kirill">
+            </div>
+            <div class="row justify-content-center">
+                <h4 class="team-scroll__wrapper-avatar__title text-center">Кирилл</h4>
+            </div>
+            <div class="row justify-content-center">
+                <p class="team-scroll__wrapper-avatar__subtitle text-center">Frontend / backend разработчик</p>
             </div>
         </div>
     </div>
@@ -288,13 +486,13 @@
 <section class="home__services pt-xl-5">
     <div class="container">
         <div class="row">
-            <div class="col-lg-11 offset-lg-1 position-relative mb-5">
+            <div class="col-lg-11 col-sm-12 offset-lg-1 position-relative mb-3">
                 <div class="home__services-title__background">
                     <h2 class="home__services-title text-uppercase">Наши услуги</h2>
                 </div>
                 <p class="home__services-subtitle">Для достижения конкретных бизнес-целей ConsStudio разрабатывает популярные типы сайтов:</p>
             </div>
-            <div class="col-lg-4 mb-4">
+            <div class="col-lg-4 col-sm-6 mb-4">
                 <div class="home__services-box">
                     <div class="row justify-content-center">
                         <h3 class="home__services-box__title text-center text-uppercase">Landing-page</h3>
@@ -304,7 +502,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 mb-4">
+            <div class="col-lg-4 col-sm-6 mb-4">
                 <div class="home__services-box">
                     <div class="row justify-content-center">
                         <h3 class="home__services-box__title text-center text-uppercase">Сайт-визитка</h3>
@@ -315,7 +513,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 mb-4">
+            <div class="col-lg-4 col-sm-6 mb-4">
                 <div class="home__services-box">
                     <div class="row justify-content-center">
                         <h3 class="home__services-box__title text-center text-uppercase">Корпоративный сайт</h3>
@@ -325,7 +523,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 mb-4">
+            <div class="col-lg-4 col-sm-6 mb-4">
                 <div class="home__services-box">
                     <div class="row justify-content-center">
                         <h3 class="home__services-box__title text-center text-uppercase">Дизайн</h3>
@@ -335,7 +533,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 mb-4">
+            <div class="col-lg-4 col-sm-6 mb-4 d-none d-sm-block">
                 <div class="home__services-box">
                     <div class="row justify-content-center">
                         <h3 class="home__services-box__title text-center text-uppercase">Интернет магазин</h3>
@@ -345,7 +543,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 mb-4">
+            <div class="col-lg-4 col-sm-6 mb-4 d-none d-sm-block">
                 <div class="home__services-box">
                     <div class="row justify-content-center">
                         <h3 class="home__services-box__title text-center text-uppercase">Блог</h3>
@@ -355,7 +553,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-12 d-flex justify-content-center">
+            <div class="col-sm-12 d-flex justify-content-center">
                 <button class="universal__button-circle position-absolute">
                     <span class="universal__button-circle-text text-uppercase">Все услуги</span>
                     <div class="universal__button-circle-wrapper">
@@ -374,7 +572,7 @@
 <section class="form mt-5 pt-5 pb-xxl-5">
     <div class="container">
         <div class="row mt-5">
-            <div class="col-xl-8 col-lg-10 offset-xl-2 offset-lg-1 mb-5">
+            <div class="col-xl-8 col-sm-10 offset-xl-2 offset-sm-1 mb-5">
                 <div class="form-brief__box position-relative">
                     <div class="form-brief__box-wrapper">
                         <p class="form-brief__description text-center mb-3">Обсудим проект? Вы можете заполнить бриф  или оставить короткую заявку.</p>
@@ -384,31 +582,31 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-12 mt-3 mb-4">
+            <div class="col-sm-12 mt-3 mb-4">
                 <h2 class="form-title text-center text-uppercase">Короткая заявка</h2>
             </div>
-            <div class="col-xl-6 col-lg-8 offset-xl-3 offset-lg-2 position-relative">
-                <div class="form-robot position-absolute">
+            <div class="col-xl-6 col-lg-8 col-sm-10 offset-xl-3 offset-lg-2 offset-sm-1 position-relative">
+                <div class="form-robot position-absolute d-none d-sm-block">
                     <img src="/images/form-robot.png" alt="robot">
                 </div>
                 <form class="row form-order" action="/order">
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 col-12">
                         <label for="orderName">Имя</label>
                         <input class="form-control" type="text" name="orderName" id="orderName" placeholder="Ваше имя">
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 col-12">
                         <label for="orderSecondName">Фамилия</label>
                         <input class="form-control" type="text" name="orderSecondName" id="orderSecondName" placeholder="Ваша фамилия">
                     </div>
-                    <div class="col-lg-12">
+                    <div class="col-12">
                         <label for="orderEmail">Email</label>
                         <input class="form-control" type="text" name="orderEmail" id="orderEmail" placeholder="Ваша почта">
                     </div>
-                    <div class="col-lg-12">
+                    <div class="col-12">
                         <label for="orderPhone">Номер телефона</label>
                         <input class="form-control" type="text" name="orderPhone" id="orderPhone" placeholder="Ваш номер телефона">
                     </div>
-                    <div class="col-lg-12">
+                    <div class="col-12">
                         <label for="orderService">Услуга</label>
                         <select class="form-control" name="orderService" id="orderService">
                             <option value="" disabled selected>Выберите услугу</option>
@@ -417,17 +615,17 @@
                             <option value=""></option>
                         </select>
                     </div>
-                    <div class="col-lg-12">
+                    <div class="col-12">
                         <label for="orderText">Расскажите о вашем проекте:</label>
                         <textarea class="form-control" type="text" name="orderText" id="orderText" rows="5"></textarea>
                     </div>
-                    <div class="col-lg-12">
+                    <div class="col-12">
                         <p>* Обязательные поля</p>
                     </div>
-                    <div class="col-lg-12">
+                    <div class="col-12">
                         <p>Нажимая на кнопку “Оставить заявку”, вы соглашаетесь с <a href="/policy">обработкой персональных данных</a></p>
                     </div>
-                    <div class="col-lg-12 d-flex justify-content-center mt-3">
+                    <div class="col-12 d-flex justify-content-center mt-3">
                         <button type="submit" class="form-order__button">
                             Оставить заявку
                         </button>
