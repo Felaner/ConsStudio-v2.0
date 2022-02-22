@@ -1,12 +1,26 @@
 @media (max-width: 1399.98px)
+  .services
+    &-card__wrapper
+      .services-card
+        min-height: 280px
 @media (max-width: 1199.98px)
 @media (max-width: 991.98px)
   .services
     padding-top: 150px
+    &-card__wrapper
+      .services-card
+        justify-content: unset
     &-button__bottom
-      position: relative
-      bottom: 0 !important
+      position: absolute
+      bottom: 10px !important
 @media (max-width: 767.98px)
+  .services
+    &-card__wrapper
+      .services-card
+        &__title
+          font-size: 22px
+        &__description
+          font-size: 14px
 @media (max-width: 575.98px)
   //services
   .services
@@ -21,3 +35,25 @@
     &-subtitle
       margin-left: 0
       text-align: center
+    &-card__wrapper
+      .services-card
+        min-height: 160px
+        max-width: 100%
+        .services-button__bottom
+          padding-right: 40px
+          height: 35px
+          right: 0
+          top: 7%
+          left: unset
+          transform: unset
+          .services__button-circle-wrapper
+            .services__button-circle-arrow
+              width: 45px
+            .services__button-circle-border
+              width: 31px
+              height: 31px
+          &:hover
+            .services__button-circle-border
+              transform: translateX(0)
+            .services__button-circle-mask
+              clip-path: circle(0)
