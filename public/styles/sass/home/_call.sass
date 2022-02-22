@@ -2,6 +2,7 @@
   position: relative
   height: 250px
   background-color: #7FFFF5
+  overflow: visible
   &-wrapper
     position: absolute
     top: 50%
@@ -32,3 +33,30 @@
       background: none
       border: none
       margin-top: 25px
+      
+.window 
+  position: relative
+  background-color: #AAAAAA
+  color: #000000
+  padding: 20px
+
+.close_button
+  position: absolute
+  top: 2px
+  right: 2px
+  padding: 0 2px 0 3px
+  border: 1px solid #000000
+  cursor: pointer
+
+.blind
+  position: fixed
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  background-color: rgba(0,0,0,0.6)
+  z-index: 20
+  display: flex
+  justify-content: center
+  align-items: center
+  visibility: hidden
