@@ -3,7 +3,78 @@
 @media (max-width: 1199.98px)
 
 @media (max-width: 991.98px)
+  .portfolio
+    padding-top: 150px
+    .project-wrapper
+      margin-top: 30px
+      margin-bottom: 0
+      &__last
+        margin-bottom: 60px
+      .project-info
+        .project-description__short
+          margin-bottom: 45px
 
 @media (max-width: 767.98px)
+  .portfolio
+    .project-wrapper
+      &__last
+      .project-info
+        .project-name__short
+          font-size: 16px
+        .project-description__short
+          font-size: 14px
+          margin-bottom: 0
+        &__button
+          font-size: 14px
 
 @media (max-width: 575.98px)
+  .portfolio
+    &-title
+      text-align: center
+      &__background
+        background-position-x: center
+    .project-wrapper
+      display: none
+    .project-wrapper__mobile
+      margin-bottom: 30px
+      .mobile-project__info
+        .mobile-project__name
+          font-size: 16px
+          line-height: 36px
+          font-family: "Bebas Neue Bold"
+          background-image: linear-gradient(135deg, rgba(20,255,236,1) 0%, rgba(136,57,255,1) 100%)
+          -webkit-background-clip: text
+          -webkit-text-fill-color: transparent
+        .mobile-project__description
+          font-size: 14px
+          color: #fefefe
+          font-family: "Source Sans Pro Regular"
+          margin-top: 10px
+          margin-bottom: 10px
+    .mobile-project__img
+      position: relative
+      border-radius: 20px
+      display: flex
+      text-decoration: none
+      margin-bottom: 10px
+      &:before
+        content: ""
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        z-index: -1
+        margin: -1px
+        border-radius: inherit
+        background: linear-gradient(to bottom, #14FFEC, #8839FF)
+      img
+        border-radius: 20px
+    .mobile-project__buttons
+      margin-top: 5px
+      .project-info__button
+        width: 135px
+        text-align: center
+        color: #fefefe
+        &:before
+          right: -1px
