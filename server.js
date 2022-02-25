@@ -116,10 +116,11 @@ app.use('/blog', blogRoute);
 app.use('/portfolio', portfolioRoute);
 app.use('/contacts', contactsRoute);
 
-app.use(errorHandler);
-
-app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+
+app.use(errorHandler);
 
 const PORT = process.env.PORT || 3000;
 

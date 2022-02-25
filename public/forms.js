@@ -42,48 +42,61 @@ document.addEventListener('DOMContentLoaded', () => {
             modal.show()
         }
     })
-    // document.querySelector(".call-form").addEventListener('submit', function (el) {
-    //     event.preventDefault();
-    //     let result = true
-    //     document.querySelectorAll("input[required]").forEach(function (el, index) {
-    //         if (el.value === '') {
-    //             el.focus().classList.add('error-input');
-    //             return result = false;
-    //         } else {
-    //             el.classList.remove('error-input');
-    //         }
-    //     });
-    //     if (result === false) {
-    //         return false
-    //     } else {
-    //         if (checkCaptch && grecaptcha.getResponse(0) !== "") {
-    //             checkCaptch = false;
-    //             let $form = $(this)
-    //             $.ajax({
-    //                 type: $form.attr('method'),
-    //                 url: $form.attr('action'),
-    //                 data: $form.serialize(),
-    //                 error: function (jqXHR, textStatus, err) {
-    //                     grecaptcha.reset(0);
-    //                     console.log('error: ' + err)
-    //                 },
-    //                 beforeSend: function () {
-    //                     console.log('loading')
-    //                 },
-    //                 success: function (result) {
-    //                     console.log(result)
-    //                     grecaptcha.reset(0);
-    //                     $('.home-form')[0].reset();
-    //                     fadeAddSuccess()
-    //                 }
-    //             })
-    //             e.preventDefault();
-    //             return false;
-    //         } else {
-    //             fadeAddFailed()
-    //         }
-    //     }
-    // })
+    document.querySelector(".call-form").addEventListener('submit', function (event) {
+        event.preventDefault();
+        let result = true
+        document.querySelectorAll("input[required]").forEach(function (el, index) {
+            if (el.value === '') {
+                el.focus().classList.add('error-input');
+                return result = false;
+            } else {
+                el.classList.remove('error-input');
+            }
+        });
+        if (result === false) {
+            return false
+        } else {
+            if (checkCaptch && grecaptcha.getResponse(0) !== "") {
+                checkCaptch = false;
+                let formData = new FormData(this);
+
+                fetch('/call', {
+                    method: 'post',
+                    body: formData,
+                    headers: {"Content-type": "application/x-www-form-urlencoded"}
+                })
+                    .then(function (data) {
+                        console.log('data', data)
+                    })
+                    .catch(function (error) {
+                        console.log('error', error)
+                    })
+                // $.ajax({
+                //     type: $form.attr('method'),
+                //     url: $form.attr('action'),
+                //     data: $form.serialize(),
+                //     error: function (jqXHR, textStatus, err) {
+                //         grecaptcha.reset(0);
+                //         console.log('error: ' + err)
+                //     },
+                //     beforeSend: function () {
+                //         console.log('loading')
+                //     },
+                //     success: function (result) {
+                //         console.log(result)
+                //         grecaptcha.reset(0);
+                //         $('.home-form')[0].reset();
+                //         fadeAddSuccess()
+                //     }
+                // })
+                // e.preventDefault();
+                // return false;
+            } else {
+                console.log('Failed')
+                // fadeAddFailed()
+            }
+        }
+    })
 })
 
 function validateInputs(el) {
