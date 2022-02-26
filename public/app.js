@@ -4,12 +4,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const navDot = document.querySelector('.navbar-dot')
     const navUl = document.querySelector('.navbar-nav')
 
-    let navUlPos = navUl.getBoundingClientRect()
+    let navLiPos = activeItem.getBoundingClientRect()
     window.addEventListener("load", function () {
         navDot.style.display = 'block'
     })
 
-    navDot.style.left = document.body.scrollLeft + navUlPos.left + (activeItemWidth / 2) - 4 + 'px'
+    navDot.style.left = document.body.scrollLeft + navLiPos.left + (activeItemWidth / 2) - 4 + 'px'
 
     document.querySelectorAll('.navbar .nav-item').forEach(el => {
         el.addEventListener('mouseover' ,function(el){
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     })
     navUl.addEventListener('mouseleave' ,function(el){
-        let scrollLeft = document.body.scrollLeft + navUlPos.left;
+        let scrollLeft = document.body.scrollLeft + navLiPos.left;
         navDot.style.left = scrollLeft + (activeItemWidth / 2) - 4 + 'px'
     });
 })

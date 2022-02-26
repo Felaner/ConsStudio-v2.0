@@ -20,12 +20,19 @@ document.addEventListener('DOMContentLoaded', () => {
     let events = ['input', 'focus', 'blur'];
     const callModalButton = document.querySelector('.call-form__show-modal')
     const formModalButton = document.querySelector('.form-order__button')
+    const callFormModalButtons = document.querySelectorAll('.call-form-modal__button')
     let activeModal;
     document.querySelectorAll('input[required]').forEach((el, index) => {
         events.forEach(function(event) {
             el.addEventListener(event, function () {
                 validateInputs(el)
             })
+        })
+    })
+    callFormModalButtons.forEach(function (el, index) {
+        el.addEventListener('click', function (el) {
+            activeModal = new bootstrap.Modal(document.querySelector('#callModalForm'))
+            activeModal.show()
         })
     })
     const callModals = [callModalButton, formModalButton]

@@ -7,7 +7,7 @@ const fs = require('fs');
 router.get('/', (req, res) => {
     res.render('landing', {
         title: 'Landing-page',
-        isLanding: true
+        isServices: true
     });
 });
 

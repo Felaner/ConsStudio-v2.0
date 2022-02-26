@@ -7,7 +7,7 @@ const fs = require('fs');
 router.get('/', (req, res) => {
     res.render('corporate', {
         title: 'Корпоративный сайт',
-        isCorporate: true
+        isServices: true
     });
 });
 

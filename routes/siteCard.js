@@ -7,7 +7,7 @@ const fs = require('fs');
 router.get('/', (req, res) => {
     res.render('siteCard', {
         title: 'Сайт визитка',
-        isSiteCard: true
+        isServices: true
     });
 });
 

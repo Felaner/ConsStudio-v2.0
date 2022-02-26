@@ -13,24 +13,46 @@
                         <a class="nav-link {{#if isHome}}active{{/if}}" href="/">Главная</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/services">Услуги</a>
+                        <a class="nav-link {{#if isServices}}active{{/if}}" href="/services">Услуги</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/portfolio">Портфолио</a>
+                        <a class="nav-link {{#if isPortfolio}}active{{/if}}" href="/portfolio">Портфолио</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/contacts">Контакты</a>
+                        <a class="nav-link {{#if isContacts}}active{{/if}}" href="/contacts">Контакты</a>
                     </li>
                 </ul>
             </div>
             <div class="col-xl-2 col-lg-3 offset-xl-1 offset-lg-0 text-end my-auto d-none d-lg-block">
-                <a href="#" class="universal__button scroll-to__call">
+                <a href="#" class="universal__button {{#if isHome}}scroll-to__call{{else}}call-form-modal__button{{/if}}">
                     Заказать звонок
                 </a>
             </div>
         </div>
     </div>
 </nav>
+
+<div class="modal fade" id="callModalForm" tabindex="-1" aria-labelledby="callModalForm" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="callModal">Заказать звонок</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form class="call-form__modal" action="/call" method="post">
+                <div class="modal-body">
+                    <p class="text-center">Заполните форму, мы Вам перезвоним</p>
+                    <input class="form-control mb-2" type="text" name="callName" id="callName" placeholder="Ваше имя" required>
+                    <input class="form-control" type="tel" name="callPhone" id="callPhone" placeholder="Ваш номер телефона" required>
+                    <div id="grecaptcha1" class="d-flex justify-content-center g-recaptcha" data-widget-id="1"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="universal__button">Отправить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
 <div class="logo-wrap d-block d-lg-none">
     <a href="/"><img src="/images/logo/logo.svg" width="60" height="75" class="d-inline-block align-top" alt="" loading="lazy"></a>

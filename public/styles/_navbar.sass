@@ -6,6 +6,33 @@
   cursor: pointer
   z-index: 1
 
+#callModalForm
+  .modal-content
+    background-color: #575757
+    p, h5
+      color: #FFFFFF
+  input
+    color: #FFFFFF
+    height: 50px
+    background: rgba(37, 37, 37, 0.8)
+    margin-bottom: 20px
+    border-radius: 20px
+    padding: 20px
+    border: none
+    &::placeholder
+      color: rgba(255, 255, 255, 0.6)
+    &:focus
+      background: rgba(37, 37, 37, 0.8)
+  .btn-close
+    background-image: url("/images/icons/close-white.svg")
+    &:focus, &:focus-visible
+      outline: none
+      border: none
+      box-shadow: unset
+  .universal__button
+    padding: 7px 30px
+
+
 .navbar
   &-dot
     display: none

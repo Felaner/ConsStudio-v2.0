@@ -7,7 +7,7 @@ const fs = require('fs');
 router.get('/', (req, res) => {
     res.render('blog', {
         title: 'Блог',
-        isBlog: true
+        isServices: true
     });
 });
 
