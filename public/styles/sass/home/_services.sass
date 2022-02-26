@@ -15,14 +15,15 @@
     margin-left: -8px
     font-size: 16px
   &-box
+    overflow: hidden
     display: block
     width: 400px
     height: 225px
     position: relative
     padding: 20px
     background-color: #02031C
-    $border: 1px
-    border: solid $border transparent
+    $border: 1.5px
+    border: solid $border #1b7cd0
     border-radius: 20px
     color: #FFF
     background-clip: padding-box
@@ -30,29 +31,51 @@
     &:before
       content: ''
       position: absolute
-      top: 0
-      right: 0
-      bottom: 0
-      left: 0
-      z-index: -1
-      margin: -$border
-      border-radius: inherit
-      background: linear-gradient(to bottom, #8839FF, #14FFEC)
+      top: 50%
+      left: 50%
+      display: block
+      width: 0
+      height: 0
+      border-radius: 100%
+      transform: translate(-50%, -50%)
+      opacity: 0
+      z-index: 2
     &:hover
       &:before
-        background: url("/images/home-services__box-hover.svg") no-repeat
-        background-size: cover
-        z-index: 1
+        animation: services_animate 0.6s ease forwards
+      .home__services-box__title
+        background-image: linear-gradient(to bottom, #ffffff, #ffffff)
     .universal__button-circle
       position: absolute
       left: 50%
       transform: translateX(-50%)
       bottom: 0
     &__title
+      -webkit-transition: all 0.6s ease-in-out
+      transition: all 0.6s ease-in-out
+      background-image: linear-gradient(to bottom, #14FFEC, #8839FF)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+      background-size: 100% 100%
+      z-index: 10
       font-size: 34px
     &__subtitle
+      z-index: 10
       color: #FEFEFE
       font-size: 16px
       line-height: 28px
   .universal__button-circle-text
     font-size: 18px
+
+@keyframes services_animate
+  0%
+    opacity: .5
+    background: url("/images/home-services__box-hover.svg") no-repeat
+    background-size: cover
+
+  100%
+    background: url("/images/home-services__box-hover.svg") no-repeat
+    background-size: cover
+    width: 200%
+    height: 200%
+    opacity: 1
