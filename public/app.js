@@ -70,6 +70,21 @@ document.addEventListener('DOMContentLoaded', () => {
     App();
 });
 
+$(function(){
+    $('.scroll-to__navbar').on('click', function(e){
+        $('html,body').stop().animate({ scrollTop: $('#scroll-point__navbar').offset().top }, 1000);
+        e.preventDefault();
+    });
+    $('.scroll-to__call').on('click', function(e){
+        $('html,body').stop().animate({ scrollTop: $('#scroll-point__call').offset().top }, 1000);
+        e.preventDefault();
+    });
+    $('.scroll-to__order').on('click', function(e){
+        $('html,body').stop().animate({ scrollTop: $('#scroll-point__order').offset().top }, 1000);
+        e.preventDefault();
+    });
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     const eyeButton = document.querySelector('.nav__eye')
     const upLine = eyeButton.querySelector('.nav__eye-up__line'),

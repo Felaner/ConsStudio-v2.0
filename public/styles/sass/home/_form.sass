@@ -59,10 +59,14 @@
       background: none
       height: 52px
       margin-bottom: 20px
+      color: #FFFFFF
       &::placeholder
         padding-left: 25px
         color: rgba(255, 255, 255, 0.6)
         font-size: 14px
+      &:focus
+        border-color: #FEFEFE
+        color: #FFFFFF
     select
       color: rgba(255, 255, 255, 0.6)
     textarea
@@ -78,3 +82,14 @@
       border: solid 1px #14FFEC
       border-radius: 50px
       color: #14FFEC
+
+  .modal-title
+    color: #000
+
+  .btn-close
+    &:focus, &:focus-visible
+      outline: none
+      border: none
+      box-shadow: unset
+  .universal__button
+    padding: 7px 30px

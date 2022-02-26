@@ -15,8 +15,9 @@
     margin-left: -8px
     font-size: 16px
   &-box
+    display: block
     width: 400px
-    height: 250px
+    height: 225px
     position: relative
     padding: 20px
     background-color: #02031C
@@ -37,6 +38,16 @@
       margin: -$border
       border-radius: inherit
       background: linear-gradient(to bottom, #8839FF, #14FFEC)
+    &:hover
+      &:before
+        background: url("/images/home-services__box-hover.svg") no-repeat
+        background-size: cover
+        z-index: 1
+    .universal__button-circle
+      position: absolute
+      left: 50%
+      transform: translateX(-50%)
+      bottom: 0
     &__title
       font-size: 34px
     &__subtitle

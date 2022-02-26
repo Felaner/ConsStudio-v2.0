@@ -29,10 +29,18 @@
       &:focus
         background: rgba(37, 37, 37, 0.8)
 
-    button
+
+    .btn-close
+      &:focus, &:focus-visible
+        outline: none
+        border: none
+        box-shadow: unset
+    &__show-modal
       background: none
       border: none
       margin-top: 25px
+    .universal__button
+      padding: 7px 30px
       
 .window 
   position: relative
