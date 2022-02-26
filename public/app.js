@@ -1,4 +1,31 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const activeItem = document.querySelector('.navbar .nav-item .active');
+    const activeItemWidth = activeItem.clientWidth;
+    const navDot = document.querySelector('.navbar-dot')
+    const navUl = document.querySelector('.navbar-nav')
+
+    let navUlPos = navUl.getBoundingClientRect()
+    window.addEventListener("load", function () {
+        navDot.style.display = 'block'
+    })
+
+    navDot.style.left = document.body.scrollLeft + navUlPos.left + (activeItemWidth / 2) - 4 + 'px'
+
+    document.querySelectorAll('.navbar .nav-item').forEach(el => {
+        el.addEventListener('mouseover' ,function(el){
+            let c = this.getBoundingClientRect(),
+                elWidth = el.target.clientWidth,
+                scrollLeft = document.body.scrollLeft + c.left;
+            navDot.style.left = scrollLeft + (elWidth / 2) - 4 + 'px'
+        });
+    })
+    navUl.addEventListener('mouseleave' ,function(el){
+        let scrollLeft = document.body.scrollLeft + navUlPos.left;
+        navDot.style.left = scrollLeft + (activeItemWidth / 2) - 4 + 'px'
+    });
+})
+
+document.addEventListener('DOMContentLoaded', () => {
     // document.getElementsByTagName("body")[0].addEventListener("mousemove", function(n) {
     //     t.style.left = n.clientX + "px",
     //         t.style.top = n.clientY + "px",
