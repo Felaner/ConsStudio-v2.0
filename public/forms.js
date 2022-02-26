@@ -19,7 +19,8 @@ function verifyCallback(response) {
 document.addEventListener('DOMContentLoaded', () => {
     let events = ['input', 'focus', 'blur'];
     const callModalButton = document.querySelector('.call-form__show-modal')
-    const modal = new bootstrap.Modal(document.querySelector('#callModal'))
+    const formModalButton = document.querySelector('.form-order__button')
+    let activeModal;
     document.querySelectorAll('input[required]').forEach((el, index) => {
         events.forEach(function(event) {
             el.addEventListener(event, function () {
@@ -27,75 +28,72 @@ document.addEventListener('DOMContentLoaded', () => {
             })
         })
     })
-    callModalButton.addEventListener('click', function (el) {
-        let errors = false
-        const inputs = el.target.parentNode.parentNode.parentNode.querySelectorAll('input[required]')
-        for(let i = 0; i < inputs.length; i++) {
-            let el = inputs[i]
-            if (el.value === '' || el.classList.contains('error-input')) {
-                el.focus()
-                errors = true
-                return false
+    const callModals = [callModalButton, formModalButton]
+    callModals.forEach(function (el, index) {
+        el.addEventListener('click', function (el) {
+            let errors = false
+            const inputs = el.target.parentNode.parentNode.parentNode.querySelectorAll('input[required]')
+            for(let i = 0; i < inputs.length; i++) {
+                let el = inputs[i]
+                if (el.value === '' || el.classList.contains('error-input')) {
+                    el.focus()
+                    errors = true
+                    return false
+                }
             }
-        }
-        if (errors === false) {
-            modal.show()
-        }
+            if (errors === false) {
+                activeModal = new bootstrap.Modal(el.target.parentNode.parentNode.parentNode.querySelector('.modal'))
+                activeModal.show()
+            }
+        })
     })
-    document.querySelector(".call-form").addEventListener('submit', function (event) {
-        event.preventDefault();
-        let result = true
-        document.querySelectorAll("input[required]").forEach(function (el, index) {
-            if (el.value === '') {
-                el.focus().classList.add('error-input');
-                return result = false;
+    const callForm = document.querySelector(".call-form"),
+        orderForm = document.querySelector(".form-order"),
+        forms = [callForm, orderForm];
+    forms.forEach(function (el, index) {
+        el.addEventListener('submit', function (event) {
+            event.preventDefault();
+            let result = true
+            event.target.querySelectorAll("input[required]").forEach(function (el, index) {
+                if (el.value === '') {
+                    el.focus().classList.add('error-input');
+                    return result = false;
+                } else {
+                    el.classList.remove('error-input');
+                }
+            });
+            if (result === false) {
+                return false
             } else {
-                el.classList.remove('error-input');
-            }
-        });
-        if (result === false) {
-            return false
-        } else {
-            if (checkCaptch && grecaptcha.getResponse(0) !== "") {
-                checkCaptch = false;
-                let formData = new FormData(this);
-
-                fetch('/call', {
-                    method: 'post',
-                    body: formData,
-                    headers: {"Content-type": "application/x-www-form-urlencoded"}
-                })
-                    .then(function (data) {
-                        console.log('data', data)
+                if (checkCaptch && grecaptcha.getResponse(index) !== "") {
+                    checkCaptch = false;
+                    let $form = $(this)
+                    $.ajax({
+                        type: $form.attr('method'),
+                        url: $form.attr('action'),
+                        data: $form.serialize(),
+                        error: function (jqXHR, textStatus, err) {
+                            grecaptcha.reset(index);
+                            console.log('error: ' + err)
+                        },
+                        beforeSend: function () {
+                            console.log('loading')
+                        },
+                        success: function (result) {
+                            console.log(result)
+                            grecaptcha.reset(index);
+                            activeModal.hide()
+                            event.target.reset();
+                        }
                     })
-                    .catch(function (error) {
-                        console.log('error', error)
-                    })
-                // $.ajax({
-                //     type: $form.attr('method'),
-                //     url: $form.attr('action'),
-                //     data: $form.serialize(),
-                //     error: function (jqXHR, textStatus, err) {
-                //         grecaptcha.reset(0);
-                //         console.log('error: ' + err)
-                //     },
-                //     beforeSend: function () {
-                //         console.log('loading')
-                //     },
-                //     success: function (result) {
-                //         console.log(result)
-                //         grecaptcha.reset(0);
-                //         $('.home-form')[0].reset();
-                //         fadeAddSuccess()
-                //     }
-                // })
-                // e.preventDefault();
-                // return false;
-            } else {
-                console.log('Failed')
-                // fadeAddFailed()
+                    event.preventDefault();
+                    return false;
+                } else {
+                    console.log('Failed')
+                    // fadeAddFailed()
+                }
             }
-        }
+        })
     })
 })
 
@@ -103,7 +101,7 @@ function validateInputs(el) {
     let elValue = el.value
     let elName = el.getAttribute('name')
     let elType = el.getAttribute('type')
-    if (el.getAttribute('type') === 'email') {
+    if (elType === 'email') {
         let regEmail = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
         if (elValue === '' || regEmail.test(elValue) === false) {
             el.classList.add('error-input');

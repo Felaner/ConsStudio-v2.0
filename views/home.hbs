@@ -11,7 +11,7 @@
                 </div>
                 <p class="main-subtitle text-end mt-lg-5 mt-lg-4 ps-lg-0 ps-sm-4">Наша организация специфицируется на создании сайтов. Мы создадим для вас уникальный проект с нуля или же доработаем действующий. <span class="d-none d-md-inline">У нас работают лучшие специалисты, которые любят свое дело.</span></p>
             </div>
-            <button class="main-button universal__button-circle position-absolute">
+            <button class="main-button universal__button-circle position-absolute scroll-to__order">
                 <span class="universal__button-circle-text">Оставить заявку</span>
                 <div class="universal__button-circle-wrapper">
                     <div class="universal__button-circle-arrow"></div>
@@ -348,7 +348,7 @@
     </div>
 </section>
 
-<section class="call">
+<section class="call" id="scroll-point__call">
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-sm-4 col-12 offset-lg-1">
@@ -374,8 +374,7 @@
                                     <div id="grecaptcha1" class="d-flex justify-content-center g-recaptcha" data-widget-id="1"></div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
-                                    <button type="submit" class="btn btn-primary">Отправить</button>
+                                    <button type="submit" class="universal__button">Отправить</button>
                                 </div>
                             </div>
                         </div>
@@ -448,7 +447,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-12 d-none d-sm-flex justify-content-center mt-xl-5 pt-md-5 pt-sm-3">
+<!--            d-sm-flex and (media < 1400) .team {height: 850px}-->
+            <div class="col-lg-12 d-none justify-content-center mt-xl-5 pt-md-5 pt-sm-3">
                 <a class="team-arrow" href="#">
                     <img src="/images/team/team-arrow.svg" alt="arrow">
                 </a>
@@ -513,17 +513,17 @@
                 <p class="home__services-subtitle">Для достижения конкретных бизнес-целей ConsStudio разрабатывает популярные типы сайтов:</p>
             </div>
             <div class="col-lg-4 col-sm-6 mb-4">
-                <div class="home__services-box">
+                <a href="/landing" class="home__services-box">
                     <div class="row justify-content-center">
                         <h3 class="home__services-box__title text-center text-uppercase">Landing-page</h3>
                     </div>
                     <div class="row justify-content-center">
                         <p class="home__services-box__subtitle text-center">Небольшой одностраничный сайт, полностью заточенный под то, чтобы попадающий на него клиент выполнил целевое действие.</p>
                     </div>
-                </div>
+                </a>
             </div>
             <div class="col-lg-4 col-sm-6 mb-4">
-                <div class="home__services-box">
+                <a href="/site-card" class="home__services-box">
                     <div class="row justify-content-center">
                         <h3 class="home__services-box__title text-center text-uppercase">Сайт-визитка</h3>
                     </div>
@@ -531,50 +531,50 @@
                         <p class="home__services-box__subtitle text-center">
                             Основная цель - краткая передача информации о компании или персоне для привлечения внимания посетителей.</p>
                     </div>
-                </div>
+                </a>
             </div>
             <div class="col-lg-4 col-sm-6 mb-4">
-                <div class="home__services-box">
+                <a href="/corporate" class="home__services-box">
                     <div class="row justify-content-center">
                         <h3 class="home__services-box__title text-center text-uppercase">Корпоративный сайт</h3>
                     </div>
                     <div class="row justify-content-center">
                         <p class="home__services-box__subtitle text-center">Сайт представляет собой своеобразную рекламную площадку, призванную привлекать новых клиентов.</p>
                     </div>
-                </div>
+                </a>
             </div>
             <div class="col-lg-4 col-sm-6 mb-4">
-                <div class="home__services-box">
+                <a href="/design" class="home__services-box">
                     <div class="row justify-content-center">
                         <h3 class="home__services-box__title text-center text-uppercase">Дизайн</h3>
                     </div>
                     <div class="row justify-content-center">
                         <p class="home__services-box__subtitle text-center">Нарисуем дизайн для вашего будущего сайта с учетом всех ваших требований.</p>
                     </div>
-                </div>
+                </a>
             </div>
             <div class="col-lg-4 col-sm-6 mb-4 d-none d-sm-block">
-                <div class="home__services-box">
+                <a href="/store" class="home__services-box">
                     <div class="row justify-content-center">
                         <h3 class="home__services-box__title text-center text-uppercase">Интернет магазин</h3>
                     </div>
                     <div class="row justify-content-center">
                         <p class="home__services-box__subtitle text-center">Современный инструмент для ведения своего бизнеса в онлайн режиме.</p>
                     </div>
-                </div>
+                </a>
             </div>
             <div class="col-lg-4 col-sm-6 mb-4 d-none d-sm-block">
-                <div class="home__services-box">
+                <a href="/blog" class="home__services-box">
                     <div class="row justify-content-center">
                         <h3 class="home__services-box__title text-center text-uppercase">Блог</h3>
                     </div>
                     <div class="row justify-content-center">
                         <p class="home__services-box__subtitle text-center">Ваш "личный дневник", с помощью которого вы можете делиться личным мнением, опытом, впечатлениями.</p>
                     </div>
-                </div>
+                </a>
             </div>
             <div class="col-sm-12 d-flex justify-content-center">
-                <button class="universal__button-circle position-absolute">
+                <button class="universal__button-circle position-absolute" onclick="location.href = '/services'">
                     <span class="universal__button-circle-text text-uppercase">Все услуги</span>
                     <div class="universal__button-circle-wrapper">
                         <div class="universal__button-circle-arrow"></div>
@@ -602,29 +602,29 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12 mt-3 mb-4">
+            <div class="col-sm-12 mt-3 mb-4" id="scroll-point__order">
                 <h2 class="form-title text-center text-uppercase">Короткая заявка</h2>
             </div>
             <div class="col-xl-6 col-lg-8 col-sm-10 offset-xl-3 offset-lg-2 offset-sm-1 position-relative">
                 <div class="form-robot position-absolute d-none d-sm-block">
                     <img src="/images/robot.png" alt="robot">
                 </div>
-                <form class="row form-order" action="/order">
+                <form class="row form-order" action="/order" method="POST">
                     <div class="col-lg-6 col-12">
-                        <label for="orderName">Имя</label>
-                        <input class="form-control" type="text" name="orderName" id="orderName" placeholder="Ваше имя">
+                        <label for="orderName">Имя *</label>
+                        <input class="form-control" type="text" name="orderName" id="orderName" placeholder="Ваше имя" required>
                     </div>
                     <div class="col-lg-6 col-12">
                         <label for="orderSecondName">Фамилия</label>
                         <input class="form-control" type="text" name="orderSecondName" id="orderSecondName" placeholder="Ваша фамилия">
                     </div>
                     <div class="col-12">
-                        <label for="orderEmail">Email</label>
-                        <input class="form-control" type="text" name="orderEmail" id="orderEmail" placeholder="Ваша почта">
+                        <label for="orderEmail">Email *</label>
+                        <input class="form-control" type="email" name="orderEmail" id="orderEmail" placeholder="Ваша почта" required>
                     </div>
                     <div class="col-12">
-                        <label for="orderPhone">Номер телефона</label>
-                        <input class="form-control" type="text" name="orderPhone" id="orderPhone" placeholder="Ваш номер телефона">
+                        <label for="orderPhone">Номер телефона *</label>
+                        <input class="form-control" type="tel" name="orderPhone" id="orderPhone" placeholder="Ваш номер телефона" required>
                     </div>
                     <div class="col-12">
                         <label for="orderService">Услуга</label>
@@ -645,8 +645,24 @@
                     <div class="col-12">
                         <p>Нажимая на кнопку “Оставить заявку”, вы соглашаетесь с <a href="/policy">обработкой персональных данных</a></p>
                     </div>
+                    <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="formModal" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="formModal">Подтвердите, что вы не робот</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div id="grecaptcha1" class="d-flex justify-content-center g-recaptcha" data-widget-id="1"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" class="universal__button">Отправить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-12 d-flex justify-content-center mt-3">
-                        <button type="submit" class="form-order__button">
+                        <button type="button" class="form-order__button">
                             Оставить заявку
                         </button>
                     </div>
