@@ -38,6 +38,7 @@ const storeRoute = require('./routes/store');
 const blogRoute = require('./routes/blog');
 const portfolioRoute = require('./routes/portfolio');
 const contactsRoute = require('./routes/contacts');
+const policyRoute = require('./routes/policy');
 
 const keys = require('./keys');
 
@@ -115,6 +116,7 @@ app.use('/store', storeRoute);
 app.use('/blog', blogRoute);
 app.use('/portfolio', portfolioRoute);
 app.use('/contacts', contactsRoute);
+app.use('/policy', policyRoute);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
