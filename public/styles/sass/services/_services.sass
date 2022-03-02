@@ -1,20 +1,4 @@
 .services
-  padding-top: 50px
-  &-title
-    color: #FFFFFF
-    &__background
-      background: url("/images/titles/Services.svg") no-repeat
-      background-size: 245px
-      background-position-y: 13px
-      background-position-x: 11px
-      padding-top: 30px
-      margin-top: -30px
-      padding-left: 20px
-      margin-left: -20px
-  &-subtitle
-    color: #FEFEFE
-    margin-left: -8px
-    font-size: 16px
   &-button
     display: flex
     justify-content: center
@@ -44,31 +28,85 @@
     &:hover
       text-decoration: none
       color: #14FFEC
-  &-card__wrapper
-    margin-top: 60px
-    .services-card
-      display: flex
-      flex-direction: column
-      justify-content: space-between
-      max-width: 400px
-      min-height: 253px
-      position: relative
-      text-decoration: none
-      border-radius: 20px
-      background: rgba(37, 37, 37, 0.6)
-      backdrop-filter: blur(30px)
-      padding: 20px 25px
-      &__title
-        font-family: "Bebas Neue Regular", sans-serif
-        font-weight: bold
-        font-size: 34px
-        text-transform: uppercase
-        background-image: linear-gradient(135deg, rgba(20,255,236,1) 0%, rgba(136,57,255,1) 100%)
-        -webkit-background-clip: text
-        -webkit-text-fill-color: transparent
-      &__description
-        color: #FEFEFE
-        font-family: "Source Sans Pro Regular", sans-serif
-        font-weight: 300
-        font-size: 16px
-        line-height: 28px
+  &-title
+    color: #FFFFFF
+    &__background
+      background: url("/images/titles/Services.svg") no-repeat
+      background-size: 245px
+      background-position-y: 13px
+      background-position-x: 11px
+      padding-top: 30px
+      margin-top: -30px
+      padding-left: 20px
+      margin-left: -20px
+  &-subtitle
+    color: #FEFEFE
+    margin-left: -8px
+    font-size: 16px
+  &-box
+    overflow: hidden
+    display: block
+    width: 100%
+    height: 225px
+    position: relative
+    padding: 20px
+    background-color: #02031C
+    $border: 1.5px
+    border: solid $border #1b7cd0
+    border-radius: 20px
+    color: #FFF
+    background-clip: padding-box
+    text-decoration: none
+    &:before
+      content: ''
+      position: absolute
+      top: 50%
+      left: 50%
+      display: block
+      width: 0
+      height: 0
+      border-radius: 100%
+      transform: translate(-50%, -50%)
+      opacity: 0
+      z-index: 2
+    .universal__button-circle
+      position: absolute
+      left: 50%
+      transform: translateX(-50%)
+      bottom: 0
+    &:hover
+      .universal__button-circle-border
+          transform: translateX(63px)
+      .universal__button-circle-mask
+          clip-path: circle(25px at 85px)
+      &:before
+        animation: services_animate 0.6s ease forwards
+      .services-box__title
+        background-image: linear-gradient(to bottom, #ffffff, #ffffff)
+    &__title
+      -webkit-transition: all 0.6s ease-in-out
+      transition: all 0.6s ease-in-out
+      background-image: linear-gradient(to bottom, #14FFEC, #8839FF)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+      background-size: 100% 100%
+      z-index: 10
+      font-size: 34px
+    &__subtitle
+      z-index: 10
+      color: #FEFEFE
+      font-size: 16px
+      line-height: 28px
+
+@keyframes services_animate
+  0%
+    opacity: .5
+    background: url("/images/home-services__box-hover.svg") no-repeat
+    background-size: cover
+
+  100%
+    background: url("/images/home-services__box-hover.svg") no-repeat
+    background-size: cover
+    width: 200%
+    height: 200%
+    opacity: 1

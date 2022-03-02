@@ -60,11 +60,13 @@ document.addEventListener('DOMContentLoaded', () => {
         let menuItems = undefined;
         let all = undefined;
         let nav = undefined;
+        let modal = undefined;
         let scrollSkills
         const init = function init() {
             body = document.querySelector('body');
             menu = document.querySelector('.menu-icon');
             nav = document.querySelector('.navbar-mobile');
+            modal = document.querySelectorAll('.modal')[0];
             menuItems = document.querySelectorAll('.nav__list-item');
             all = document.body.children;
             applyListeners();
@@ -74,14 +76,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (body.classList.contains('nav-active')) {
                     for (let i = 0; i < all.length; i++) {
                         if (all[i] !== nav) {
-                            toggleClass(all[i], 'blur');
+                            if (all[i] !== modal) {
+                                toggleClass(all[i], 'blur');
+                            }
                         }
                     }
                 } else {
                     setTimeout(function (){
                         for (let i = 0; i < all.length; i++) {
                             if (all[i] !== nav) {
-                                toggleClass(all[i], 'blur');
+                                if (all[i] !== modal) {
+                                    toggleClass(all[i], 'blur');
+                                }
                             }
                         }
                     }, 500)

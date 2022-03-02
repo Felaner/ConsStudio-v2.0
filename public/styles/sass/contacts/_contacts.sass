@@ -14,64 +14,32 @@
       margin-left: -20px
   &-wrapper
     padding-right: 45px
-    &__address
+    &__item
+      display: flex
       margin-bottom: 35px
-      color: #fefefe
-      letter-spacing: 2px
-      font-size: 18px
-      &-item
+      p
         font-family: "Bebas Neue Regular"
-        display: flex
-        justify-content: space-between
-        img
-          margin-right: 10px
-        a
-          font-family: "Source Sans Pro Regular"
-          color: #fefefe
-          letter-spacing: 2px
-          font-size: 18px
+        margin-bottom: 0
+        color: #fefefe
+        font-size: 18px
+      a
+        font-family: "Source Sans Pro Regular"
+        color: #fefefe
+        font-size: 18px
+        text-decoration: none
+        margin-left: 15px
+        line-height: 122%
+        &:hover
           text-decoration: none
-          &:hover
-            text-decoration: none
-            color: #fefefe
-    &__mail
-      margin-bottom: 35px
-      color: #fefefe
-      letter-spacing: 2px
-      font-size: 18px
-      &-item
-        font-family: "Bebas Neue Regular"
-        display: flex
-        justify-content: space-between
-        a
-          font-family: "Source Sans Pro Regular"
           color: #fefefe
-          text-decoration: none
-          &:hover
-            color: #fefefe
-            text-decoration: none
-    &__phone
-      margin-bottom: 35px
-      color: #fefefe
-      letter-spacing: 2px
-      font-size: 18px
-      &-item
-        font-family: "Bebas Neue Regular"
-        display: flex
-        justify-content: space-between
-        img
-          margin-right: 10px
-        a
-          font-family: "Source Sans Pro Regular"
-          color: #fefefe
-          text-decoration: none
-          &:hover
-            color: #fefefe
-            text-decoration: none
+      img
+        margin-right: 10px
     &__icons
       width: 100%
       display: flex
-      justify-content: space-between
+      a
+        &:nth-child(2)
+          margin: 0 60px
   &-map
     border-radius: 20px
     //overflow: hidden

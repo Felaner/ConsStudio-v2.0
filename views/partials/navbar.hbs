@@ -41,10 +41,10 @@
             </div>
             <form class="call-form__modal" action="/call" method="post">
                 <div class="modal-body">
-                    <p class="text-center">Заполните форму, мы Вам перезвоним</p>
+                    <p class="text-start">Заполните форму, мы Вам перезвоним</p>
                     <input class="form-control mb-2" type="text" name="callName" id="callName" placeholder="Ваше имя" required>
                     <input class="form-control" type="tel" name="callPhone" id="callPhone" placeholder="Ваш номер телефона" required>
-                    <div id="grecaptcha1" class="d-flex justify-content-center g-recaptcha" data-widget-id="1"></div>
+                    <div id="grecaptcha1" class="d-flex justify-content-center g-recaptcha" data-widget-id="2"></div>
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="universal__button">Отправить</button>
@@ -72,12 +72,17 @@
     </header>
 
     <div class="nav">
-        <div class="nav__content">
+        <li class="nav__content">
             <ul class="nav__list">
                 <li class="nav__list-item"><a href="/" class="hover-target">Главная</a></li>
                 <li class="nav__list-item"><a href="/services" class="hover-target">Услуги</a></li>
                 <li class="nav__list-item"><a href="/portfolio" class="hover-target">Портфолио</a></li>
                 <li class="nav__list-item"><a href="/contacts" class="hover-target">Контакты</a></li>
+                <li class="nav__list-item">
+                    <a href="#" class="main__button call-form-modal__button">
+                        Заказать звонок
+                    </a>
+                </li>
                 <div class="nav__eye nav__list-item">
                     <div class="nav__eye-box position-absolute">
                         <img class="nav__eye-up__line" src="/images/navbar/eye-up__line.svg" alt="eye-up__line">
@@ -89,10 +94,10 @@
                     </div>
 
 
-                    <a class="position-absolute nav__eye-email" href="">
+                    <a class="position-absolute nav__eye-email" href="mailto:consstudio54@gmail.com">
                         <img src="/images/navbar/eye-email.svg" alt="email">
                     </a>
-                    <a class="position-absolute nav__eye-phone"  href="">
+                    <a class="position-absolute nav__eye-phone"  href="tel:+79877776798">
                         <img src="/images/navbar/eye-phone.svg" alt="phone">
                     </a>
                     <a class="position-absolute nav__eye-map" href="">

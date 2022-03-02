@@ -17,11 +17,29 @@ function verifyCallback(response) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    let events = ['input', 'focus', 'blur'];
-    const callModalButton = document.querySelector('.call-form__show-modal')
-    const formModalButton = document.querySelector('.form-order__button')
-    const callFormModalButtons = document.querySelectorAll('.call-form-modal__button')
-    let activeModal;
+    let events = ['input', 'focus', 'blur'],
+        callFormModalButtons,
+        callModals = [],
+        callModalButton,
+        formModalButton,
+        activeModal;
+    if (document.querySelectorAll('.call-form-modal__button').length) {
+        callFormModalButtons = document.querySelectorAll('.call-form-modal__button')
+        callFormModalButtons.forEach(function (el, index) {
+            el.addEventListener('click', function (el) {
+                activeModal = new bootstrap.Modal(document.querySelector('#callModalForm'))
+                activeModal.show()
+            })
+        })
+    }
+    if (document.querySelector('.call-form__show-modal')) {
+        callModalButton = document.querySelector('.call-form__show-modal')
+        callModals.push(callModalButton)
+    }
+    if (document.querySelector('.form-order__button')) {
+        formModalButton = document.querySelector('.form-order__button')
+        callModals.push(formModalButton)
+    }
     document.querySelectorAll('input[required]').forEach((el, index) => {
         events.forEach(function(event) {
             el.addEventListener(event, function () {
@@ -29,13 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
             })
         })
     })
-    callFormModalButtons.forEach(function (el, index) {
-        el.addEventListener('click', function (el) {
-            activeModal = new bootstrap.Modal(document.querySelector('#callModalForm'))
-            activeModal.show()
-        })
-    })
-    const callModals = [callModalButton, formModalButton]
     callModals.forEach(function (el, index) {
         el.addEventListener('click', function (el) {
             let errors = false
@@ -54,9 +65,22 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         })
     })
-    const callForm = document.querySelector(".call-form"),
-        orderForm = document.querySelector(".form-order"),
-        forms = [callForm, orderForm];
+    let callForm,
+        orderForm,
+        callModalForm,
+        forms = [];
+    if (document.querySelector(".call-form__modal")) {
+        callModalForm = document.querySelector(".call-form__modal")
+        forms.push(callModalForm)
+    }
+    if (document.querySelector(".call-form")) {
+        callForm = document.querySelector(".call-form")
+        forms.push(callForm)
+    }
+    if (document.querySelector(".form-order")) {
+        orderForm = document.querySelector(".form-order")
+        forms.push(orderForm)
+    }
     forms.forEach(function (el, index) {
         el.addEventListener('submit', function (event) {
             event.preventDefault();

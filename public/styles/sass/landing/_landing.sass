@@ -17,11 +17,16 @@
     font-size: 16px
   &-info
     margin-top: 50px
+    counter-reset: list
     &__title
       text-transform: uppercase
       color: #FEFEFE
       font-family: "Bebas Neue Bold", sans-serif
       margin-bottom: 50px
+    &__first-block
+      .landing-info__block
+        &:after
+          left: -15%
     &__block
       position: relative
       max-width: 437px
@@ -29,20 +34,22 @@
       margin-bottom: 50px
       background: rgba(37, 37, 37, 0.01)
       backdrop-filter: blur(10px)
-      border: 1px solid #14FFEC
+      border: 1px solid #1b7cd0
       border-radius: 20px
       color: #14FFEC
       text-decoration: none
-      counter-reset: number
+      counter-increment: list
       &:after
-        counter-increment: number
-        content: '' counter(number)
+        background-image: linear-gradient(to bottom, #14FFEC, #8839FF)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        font-family: "RaysCafeOutline"
+        content: counter(list) ''
         position: absolute
-        font-size: 240px
-        font-weight: bold
-        left: -20%
-        top: 0%
+        font-size: 230px
+        left: -23%
+        top: 0
         height: 250px
-        line-height: 240px
+        line-height: 300px
         z-index: -2
 
