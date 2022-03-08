@@ -242,12 +242,11 @@
 
 @media (max-width: 991.98px)
   .main
-    &-title
-      font-size: 26px
-      line-height: 180%
-      &__background
-        background-size: 340px
-        background-position-y: 38px
+    .service
+      &-title
+        &__background
+          font-size: 60px
+          bottom: -25px
     &-button
       width: auto
       right: unset
@@ -408,12 +407,11 @@
 
 @media (max-width: 767.98px)
   .main
-    &-title
-      font-size: 24px
-      letter-spacing: 5px
-      &__background
-        background-size: 260px
-        background-position-y: 41px
+    .service
+      &-title
+        &__background
+          font-size: 48px
+          bottom: -18px
     &-subtitle
       font-size: 14px
     &-button
@@ -448,6 +446,8 @@
 
   .skills
     height: 340px
+    .service-title
+      font-size: 24px
     .container
       background-position: -38px -25px
     &-title
@@ -554,8 +554,20 @@
 
 @media (max-width: 575.98px)
   .main
+    .service
+      &-title
+        position: relative
+        z-index: 2
+        &__wrapper
+          margin-right: 15px
+        &__background
+          bottom: -20px
+          right: 0
+          left: unset
+          z-index: 1
+          transform: unset
     position: relative
-    padding-bottom: 130px
+    padding-bottom: 100px
     .container
       padding-top: 110px
     &-mobile
@@ -611,6 +623,8 @@
         background-position-x: center
         margin-left: 0
         padding-left: 0
+    #homeMobileCarousel
+      height: 190px
     .carousel-indicators
       bottom: -50px
     .carousel-indicators [data-bs-target]
@@ -621,6 +635,10 @@
 
   .skills
     height: 270px
+    .service-title
+      font-size: 25.55px
+      &__background
+        z-index: 1
     .container
       background: none
     &-title
@@ -716,7 +734,7 @@
       text-align: center
       font-size: 14px
     &-box
-      height: 190px
+      height: auto
       &__title
         font-size: 18px
       &__subtitle

@@ -30,15 +30,29 @@ const app = express();
 
 const homeRoute = require('./routes/home');
 const servicesRoute = require('./routes/services');
-const landingRoute = require('./routes/landing');
-const siteCardRoute = require('./routes/siteCard');
-const corporateRoute = require('./routes/corporate');
-const designRoute = require('./routes/design');
-const storeRoute = require('./routes/store');
-const blogRoute = require('./routes/blog');
 const portfolioRoute = require('./routes/portfolio');
 const contactsRoute = require('./routes/contacts');
 const policyRoute = require('./routes/policy');
+
+const landingRoute = require('./routes/services/landing');
+const siteCardRoute = require('./routes/services/siteCard');
+const corporateRoute = require('./routes/services/corporate');
+const designRoute = require('./routes/services/design');
+const storeRoute = require('./routes/services/store');
+const blogRoute = require('./routes/services/blog');
+const ecoSiteRoute = require('./routes/services/ecoSite');
+const vitrinaRoute = require('./routes/services/vitrina');
+const adaptiveDesignRoute = require('./routes/services/adaptiveDesign');
+const reDesignRoute = require('./routes/services/reDesign');
+
+const visualRoute = require('./routes/addServices/3dVisual');
+const copyrightRoute = require('./routes/addServices/copyright');
+const creating3dRoute = require('./routes/addServices/creating3d');
+const creatingLogoRoute = require('./routes/addServices/creatingLogo');
+const creatingSloganRoute = require('./routes/addServices/creatingSlogan');
+const photographyRoute = require('./routes/addServices/photography');
+const photomontageRoute = require('./routes/addServices/photomontage');
+const videographyRoute = require('./routes/addServices/videography');
 
 const keys = require('./keys');
 
@@ -108,15 +122,29 @@ app.use(express.urlencoded({extended: true}));
 
 app.use('/', homeRoute);
 app.use('/services', servicesRoute);
+app.use('/portfolio', portfolioRoute);
+app.use('/contacts', contactsRoute);
+app.use('/policy', policyRoute);
+
 app.use('/landing', landingRoute);
 app.use('/site-card', siteCardRoute);
 app.use('/corporate', corporateRoute);
 app.use('/design', designRoute);
 app.use('/store', storeRoute);
 app.use('/blog', blogRoute);
-app.use('/portfolio', portfolioRoute);
-app.use('/contacts', contactsRoute);
-app.use('/policy', policyRoute);
+app.use('/eco-site', ecoSiteRoute);
+app.use('/showcase', vitrinaRoute);
+app.use('/adaptive-design', adaptiveDesignRoute);
+app.use('/redesign', reDesignRoute);
+
+app.use('/3D-visual', visualRoute);
+app.use('/copyright', copyrightRoute);
+app.use('/creating-3D-video', creating3dRoute);
+app.use('/creating-logo', creatingLogoRoute);
+app.use('/creating-slogan', creatingSloganRoute);
+app.use('/photography', photographyRoute);
+app.use('/photomontage', photomontageRoute);
+app.use('/videography', videographyRoute);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));

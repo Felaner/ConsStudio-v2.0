@@ -162,3 +162,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 20);
     })
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.querySelectorAll('.project-info__button')
+    btn.forEach(el => {
+        el.addEventListener('click', function (el) {
+            el.preventDefault()
+            let parentBox = el.target.parentNode.parentNode.parentNode.parentNode.querySelector('.project-description')
+
+            parentBox.classList.toggle("opened");
+
+            if ( parentBox.classList.contains("opened") ) {
+                parentBox.style.maxHeight = `1000px`;
+            } else {
+                parentBox.style.maxHeight = "0px";
+            }
+        })
+    })
+})

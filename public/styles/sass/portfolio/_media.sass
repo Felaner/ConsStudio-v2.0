@@ -5,9 +5,15 @@
 @media (max-width: 991.98px)
   .portfolio
     padding-top: 150px
+    .opened
+      transition: max-height 1s ease-in-out
     .project-wrapper
       margin-top: 30px
       margin-bottom: 0
+    .project-description
+      overflow: hidden
+      max-height: 0
+      transition: all 1s
       &__last
         margin-bottom: 60px
       .project-info
@@ -19,7 +25,7 @@
     .project-wrapper
       .project-info
         .project-name__short
-          font-size: 16px
+          font-size: 24px
         .project-description__short
           font-size: 14px
           margin-bottom: 0
