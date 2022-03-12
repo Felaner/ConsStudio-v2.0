@@ -31,15 +31,20 @@
         &:after
           left: -15%
     &__block
+      display: flex
+      align-items: center
+      text-align: center
+      font-size: 20px
+      padding: 20px
       position: relative
       max-width: 437px
       min-height: 250px
       margin-bottom: 50px
-      background: rgba(37, 37, 37, 0.01)
+      background: #02031c
       backdrop-filter: blur(10px)
       border: 1px solid #1b7cd0
       border-radius: 20px
-      color: #14FFEC
+      color: #fefefe
       text-decoration: none
       counter-increment: list
       &:after
@@ -51,7 +56,8 @@
         position: absolute
         font-size: 230px
         left: -23%
-        top: 0
+        top: 50%
         height: 250px
-        line-height: 300px
+        line-height: 305px
         z-index: -2
+        transform: translateY(-50%)
