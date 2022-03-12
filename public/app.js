@@ -4,24 +4,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const navDot = document.querySelector('.navbar-dot')
     const navUl = document.querySelector('.navbar-nav')
 
-    let navLiPos = activeItem.getBoundingClientRect()
     window.addEventListener("load", function () {
         navDot.style.display = 'block'
     })
 
-    navDot.style.left = document.body.scrollLeft + navLiPos.left + (activeItemWidth / 2) - 4 + 'px'
+    navDot.style.left = activeItem.offsetLeft - 4 + (activeItemWidth / 2) + 'px'
 
     document.querySelectorAll('.navbar .nav-item').forEach(el => {
         el.addEventListener('mouseover' ,function(el){
-            let c = this.getBoundingClientRect(),
-                elWidth = el.target.clientWidth,
-                scrollLeft = document.body.scrollLeft + c.left;
-            navDot.style.left = scrollLeft + (elWidth / 2) - 4 + 'px'
+            let offsetLeft = el.target.offsetLeft - 4,
+                elWidth = el.target.clientWidth
+            navDot.style.left = offsetLeft + (elWidth / 2) + 'px'
         });
     })
     navUl.addEventListener('mouseleave' ,function(el){
-        let scrollLeft = document.body.scrollLeft + navLiPos.left;
-        navDot.style.left = scrollLeft + (activeItemWidth / 2) - 4 + 'px'
+        let scrollLeft = activeItem.offsetLeft - 4;
+        navDot.style.left = scrollLeft + (activeItemWidth / 2) + 'px'
     });
 })
 
