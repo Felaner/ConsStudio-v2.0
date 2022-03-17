@@ -19,6 +19,16 @@
     .brief-robot
       left: -33.6%
 
+  .brief-page
+    &__robot
+      position: absolute
+      top: 130px
+      right: 0
+      filter: blur(6px)
+      z-index: -1
+      img
+        opacity: 0.6
+
 @media (max-width: 767.98px)
 
   //brief
@@ -30,6 +40,14 @@
       width: 100px
       height: 90px
 
+  .brief-page
+    &__robot
+      top: 100px
+      filter: blur(8px)
+      transform: scale(0.7)
+      img
+        opacity: 0.4
+
 @media (max-width: 575.98px)
 
   //brief
@@ -38,3 +56,27 @@
     padding-top: 0
     .brief-robot
       display: none
+
+  .brief-page
+    padding-top: 130px
+    &__subtitle
+      margin-left: 0
+      font-size: 14px
+    &__robot
+      top: 200px
+    &__text
+      &-helper
+        font-size: 14px
+        margin-left: 0
+    &__form
+      .iterator
+        top: 10px
+        right: unset
+        left: 50%
+        transform: translateX(-50%)
+        font-size: 18px
+      &-contacts
+        label
+          font-size: 14px
+        textarea
+          min-height: 80px

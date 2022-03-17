@@ -27,3 +27,69 @@
     z-index: 100
     img
       transform: scale(-1, 1)
+
+.brief-page
+  padding-top: 50px
+  &__subtitle
+    color: #FEFEFE
+    margin-left: -8px
+    font-size: 16px
+  &__text
+    &-helper
+      color: #FFFFFF
+      margin-left: 30px
+  &__form
+    position: relative
+    border: solid 1px #8839FF
+    border-radius: 20px
+    &-contacts
+      border: solid 1px #14FFEC
+      border-radius: 20px
+      label
+        font-family: "Bebas Neue Regular", sans-serif
+        margin-bottom: 4px
+        font-size: 16px
+        letter-spacing: 2px
+        color: #FFFFFF
+      input, select, textarea
+        border: 1px solid #FEFEFE
+        border-radius: 10px
+        background: none
+        margin-bottom: 12px
+        color: #FFFFFF
+        &::placeholder
+          padding-left: 25px
+          color: rgba(255, 255, 255, 0.6)
+          font-size: 14px
+        &:focus
+          border-color: #FEFEFE
+          color: #FFFFFF
+      //textarea
+      //  border: 1px solid #FEFEFE
+      //  border-radius: 10px
+      //  background: none
+      //  margin-bottom: 10px
+    .iterator
+      position: absolute
+      color: #FFFFFF
+      top: 10px
+      right: 20px
+      font-size: 22px
+    &-check
+      margin-right: 5px
+    &-arrow
+      border: none
+      background: none
+      color: #FFFFFF
+      font-size: 22px
+      img
+        transform: scale(0.65)
+        transition: all .3s ease-in
+      &:first-child
+        &:hover
+          img
+            transform: translateX(-15px) scale(0.70)
+      &:last-child
+        &:hover
+          img
+            transform: translateX(15px) scale(0.70)
