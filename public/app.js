@@ -178,3 +178,11 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     })
 })
+
+$(function() {
+    $('.marquee').marquee({
+        duration: 50000,
+        startVisible: true,
+        duplicated: true
+    });
+});
