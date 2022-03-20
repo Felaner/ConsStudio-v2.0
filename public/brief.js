@@ -173,8 +173,10 @@ function prevQuestion(num) {
     if (questType === 'radio') {
         brief[num].answers.forEach(el => {
             let checked
-            clientAnswers.forEach((ans, i) => {})
-            questBox.innerHTML += `<div class="col-12 col-md-6"><label><input type="${questType}" name="q${num}" value="${el.text}" ${(e) => prevAnswer(e, num)}>${el.text}</label></div>`
+            if (clientAnswers[num].answ === el.text) {
+                checked = 'checked'
+            }
+            questBox.innerHTML += `<div class="col-12 col-md-6"><label><input type="${questType}" name="q${num}" value="${el.text}" ${checked}>${el.text}</label></div>`
         })
     } else if (questType === 'textarea') {
         questBox.innerHTML += `<div class="col-12"><label><textarea></textarea></div>`
