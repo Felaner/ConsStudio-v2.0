@@ -1,26 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const activeItem = document.querySelector('.navbar .nav-item .active');
-    const activeItemWidth = activeItem.clientWidth;
-    const navDot = document.querySelector('.navbar-dot')
-    const navUl = document.querySelector('.navbar-nav')
+    if (document.querySelector('.navbar .nav-item .active')) {
+        const activeItem = document.querySelector('.navbar .nav-item .active');
+        const activeItemWidth = activeItem.clientWidth;
+        const navDot = document.querySelector('.navbar-dot')
+        const navUl = document.querySelector('.navbar-nav')
 
-    window.addEventListener("load", function () {
-        navDot.style.display = 'block'
-    })
+        window.addEventListener("load", function () {
+            navDot.style.display = 'block'
+        })
 
-    navDot.style.left = activeItem.offsetLeft - 4 + (activeItemWidth / 2) + 'px'
+        navDot.style.left = activeItem.offsetLeft - 4 + (activeItemWidth / 2) + 'px'
 
-    document.querySelectorAll('.navbar .nav-item').forEach(el => {
-        el.addEventListener('mouseover' ,function(el){
-            let offsetLeft = el.target.offsetLeft - 4,
-                elWidth = el.target.clientWidth
-            navDot.style.left = offsetLeft + (elWidth / 2) + 'px'
+        document.querySelectorAll('.navbar .nav-item').forEach(el => {
+            el.addEventListener('mouseover' ,function(el){
+                let offsetLeft = el.target.offsetLeft - 4,
+                    elWidth = el.target.clientWidth
+                navDot.style.left = offsetLeft + (elWidth / 2) + 'px'
+            });
+        })
+        navUl.addEventListener('mouseleave' ,function(el){
+            let scrollLeft = activeItem.offsetLeft - 4;
+            navDot.style.left = scrollLeft + (activeItemWidth / 2) + 'px'
         });
-    })
-    navUl.addEventListener('mouseleave' ,function(el){
-        let scrollLeft = activeItem.offsetLeft - 4;
-        navDot.style.left = scrollLeft + (activeItemWidth / 2) + 'px'
-    });
+    }
 })
 
 document.addEventListener('DOMContentLoaded', () => {
