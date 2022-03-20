@@ -32,6 +32,7 @@ const homeRoute = require('./routes/home');
 const servicesRoute = require('./routes/services');
 const portfolioRoute = require('./routes/portfolio');
 const contactsRoute = require('./routes/contacts');
+const briefRoute = require('./routes/brief');
 const policyRoute = require('./routes/policy');
 
 const landingRoute = require('./routes/services/landing');
@@ -124,6 +125,7 @@ app.use('/', homeRoute);
 app.use('/services', servicesRoute);
 app.use('/portfolio', portfolioRoute);
 app.use('/contacts', contactsRoute);
+app.use('/brief', briefRoute);
 app.use('/policy', policyRoute);
 
 app.use('/landing', landingRoute);
