@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (questNumber === 0) {
                 prev.disabled = true
             }
-            prevQuestion(questNumber)
+            nextQuestion(questNumber)
         })
     }
 })
@@ -108,98 +108,62 @@ function nextQuestion(num, clientAnswer) {
     const question = document.querySelector('.question')
     const questNumber = document.querySelector('.iterator')
 
-    let questTotal
+    if (brief[num]) {
 
-    if (questNumber.querySelector('span')) {
-        questTotal = questNumber.querySelector('span').innerHTML
-    }
+        let questTotal
 
-    if (clientAnswer) {
-        let find = false
-        clientAnswers.forEach((el, i) => {
-            if (el.questNum === brief[num].num - 1)  {
-                clientAnswers[i].answ = clientAnswer
-                find = true
-            }
-        })
-        if (!find) {
-            clientAnswers.push({questNum: brief[num].num - 1, quest: question.innerHTML, answ: clientAnswer})
+        if (questNumber.querySelector('span')) {
+            questTotal = questNumber.querySelector('span').innerHTML
+        }
+        if (num === 0) {
+            questNumber.innerHTML = ''
+        } else {
+
+            questNumber.innerHTML = `Вопрос ${num} из <span>${questTotal}</span>`
+
         }
 
-        if (num === 1) {
-            questTotal = brief[0].answers.find(ans => ans.text === clientAnswer).questTotal
-        }
-
-        questNumber.innerHTML = `Вопрос ${num} из <span>${questTotal}</span>`
-    }
-
-    questBox.innerHTML = ''
-    question.innerHTML = brief[num].question
-    let questType = brief[num].type
-    if (questType === 'radio') {
-        brief[num].answers.forEach(el => {
-            questBox.innerHTML += `<div class="col-12 col-md-6"><label><input type="${questType}" name="q${num}" value="${el.text}">${el.text}</label></div>`
-        })
-    } else if (questType === 'textarea') {
-        questBox.innerHTML += `<div class="col-12"><label><textarea></textarea></div>`
-    } else if (questType === 'text') {
-        questBox.innerHTML += `<div class="col-12 col-md-6"><label><input type="${questType}" name="q${num}"></label></div>`
-    } else {
-        questBox.innerHTML += `<p>Такого типа нет</p>`
-    }
-    console.log(clientAnswers)
-}
-
-function prevQuestion(num) {
-    const questBox = document.querySelector('.question-box')
-    const question = document.querySelector('.question')
-    const questNumber = document.querySelector('.iterator')
-
-    if (num === 0) {
-        questNumber.innerHTML = ''
-    }
-
-    let questTotal
-
-    if (questNumber.querySelector('span')) {
-        questTotal = questNumber.querySelector('span').innerHTML
-    }
-
-    questNumber.innerHTML = `Вопрос ${num} из <span>${questTotal}</span>`
-
-    questBox.innerHTML = ''
-    question.innerHTML = brief[num].question
-    let questType = brief[num].type
-    if (questType === 'radio') {
-        brief[num].answers.forEach(el => {
-            let checked
-            if (clientAnswers[num].answ === el.text) {
-                checked = 'checked'
-            }
-            questBox.innerHTML += `<div class="col-12 col-md-6"><label><input type="${questType}" name="q${num}" value="${el.text}" ${checked}>${el.text}</label></div>`
-        })
-    } else if (questType === 'textarea') {
-        questBox.innerHTML += `<div class="col-12"><label><textarea></textarea></div>`
-    } else if (questType === 'text') {
-        questBox.innerHTML += `<div class="col-12 col-md-6"><label><input type="${questType}" name="q${num}"></label></div>`
-    } else {
-        questBox.innerHTML += `<p>Такого типа нет</p>`
-    }
-
-}
-
-function prevAnswer (el, num) {
-    let result
-    if (el.type === 'radio') {
-        clientAnswers.forEach((ans, i) => {
-            if (ans.questNum === brief[num].num - 1)  {
-                if (el.value === ans.answ) {
-                    result = 'checked'
+        if (clientAnswer) {
+            let find = false
+            clientAnswers.forEach((el, i) => {
+                if (el.questNum === brief[num].num - 1)  {
+                    clientAnswers[i].answ = clientAnswer
+                    find = true
                 }
+            })
+            if (!find) {
+                clientAnswers.push({questNum: brief[num].num - 1, quest: question.innerHTML, answ: clientAnswer})
             }
-        })
+
+            if (num === 1) {
+                questTotal = brief[0].answers.find(ans => ans.text === clientAnswer).questTotal
+            }
+
+            questNumber.innerHTML = `Вопрос ${num} из <span>${questTotal}</span>`
+        }
+
+        questBox.innerHTML = ''
+        question.innerHTML = brief[num].question
+        let questType = brief[num].type
+        let prevAnsw = ''
+        if (clientAnswers[num]) {
+            prevAnsw = clientAnswers[num].answ
+        }
+        if (questType === 'radio') {
+            brief[num].answers.forEach(el => {
+                let checked = ''
+                if (prevAnsw === el.text) {
+                    checked = 'checked'
+                }
+                questBox.innerHTML += `<div class="col-12 col-md-6"><label><input type="${questType}" name="q${num}" value="${el.text}" ${checked}><span>${el.text}</span></label></div>`
+            })
+        } else if (questType === 'textarea') {
+            questBox.innerHTML += `<div class="col-12"><label><textarea>${prevAnsw}</textarea></div>`
+        } else if (questType === 'text') {
+            questBox.innerHTML += `<div class="col-12 col-md-6"><label><input type="${questType}" name="q${num}" value="${prevAnsw}"></label></div>`
+        } else {
+            questBox.innerHTML += `<p>Такого типа нет</p>`
+        }
+        console.log(clientAnswers)
     }
-    console.log(el)
-    console.log(result)
-    return result
 }
