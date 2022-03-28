@@ -158,9 +158,9 @@ function nextQuestion(num, clientAnswer) {
                 questBox.innerHTML += `<div class="col-12 col-md-6"><label><input type="${questType}" name="q${num}" value="${el.text}" ${checked}><span>${el.text}</span></label></div>`
             })
         } else if (questType === 'textarea') {
-            questBox.innerHTML += `<div class="col-12"><label><textarea>${prevAnsw}</textarea></div>`
+            questBox.innerHTML += `<div class="col-12 d-flex justify-content-center"><textarea>${prevAnsw}</textarea></div>`
         } else if (questType === 'text') {
-            questBox.innerHTML += `<div class="col-12 col-md-6"><label><input type="${questType}" name="q${num}" value="${prevAnsw}"></label></div>`
+            questBox.innerHTML += `<div class="col-12 col-md-6 d-flex justify-content-center"><label class="w-50"><input class="w-100" type="${questType}" name="q${num}" value="${prevAnsw}"></label></div>`
         } else {
             questBox.innerHTML += `<p>Такого типа нет</p>`
         }
