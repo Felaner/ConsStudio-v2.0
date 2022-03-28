@@ -107,10 +107,6 @@ $seconday: #ffffff
         margin: 8px 0
         -webkit-tap-highlight-color: transparent
 
-        &:hover,
-        &:focus-within
-          background: rgba($seconday,.1)
-
         input[type='radio']
           vertical-align: middle
           width: 20px
@@ -137,3 +133,27 @@ $seconday: #ffffff
           display: inline-block
           line-height: 20px
           padding: 0 8px
+
+        input[type='text']
+          padding: 5px
+          border: 1px solid #FEFEFE
+          width: 50%
+          border-radius: 10px
+          background: none
+          height: 52px
+          margin-bottom: 20px
+          color: #FFFFFF
+          &:focus
+            outline: none
+
+      textarea
+        border: 1px solid #FEFEFE
+        border-radius: 10px
+        background: none
+        width: 80%
+        padding: 10px
+        min-height: 150px
+        margin-bottom: 20px
+        color: #FFFFFF
+        &:focus
+          outline: none
