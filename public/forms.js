@@ -16,6 +16,26 @@ function verifyCallback(response) {
     }
 }
 
+function fadeFlash(text, type) {
+    const box = document.querySelector('.flash');
+    box.innerHTML = `<p>${text}</p>`
+    if (type === 'success') {
+        box.style.border = '2px solid #14FFEC'
+    } else if (type === 'error') {
+        box.style.border = '2px solid red'
+    }
+    box.classList.remove('animate__slideOutUp')
+    box.style.display = 'block'
+    box.classList.add('animate__slideInDown');
+    setTimeout(function () {
+        box.classList.remove('animate__slideInDown')
+        box.classList.add('animate__slideOutUp')
+        setTimeout(function () {
+            box.style.display = 'none'
+        }, 1200)
+    }, 5000)
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     let events = ['input', 'focus', 'blur'],
         callFormModalButtons,
@@ -105,13 +125,13 @@ document.addEventListener('DOMContentLoaded', () => {
                         data: $form.serialize(),
                         error: function (jqXHR, textStatus, err) {
                             grecaptcha.reset(index);
-                            console.log('error: ' + err)
+                            fadeFlash('Ошибка', 'error')
                         },
                         beforeSend: function () {
                             console.log('loading')
                         },
                         success: function (result) {
-                            console.log(result)
+                            fadeFlash('Успешно отправлено', 'success')
                             grecaptcha.reset(index);
                             activeModal.hide()
                             event.target.reset();
@@ -120,12 +140,72 @@ document.addEventListener('DOMContentLoaded', () => {
                     event.preventDefault();
                     return false;
                 } else {
-                    console.log('Failed')
-                    // fadeAddFailed()
+                    fadeFlash('Ошибка. Капча не пройдена', 'error')
                 }
             }
         })
     })
+})
+
+document.addEventListener('DOMContentLoaded', () => {
+    let briefForm
+    let briefSubmit
+    if (document.querySelector(".brief-page__form-contacts")) {
+        briefForm = document.querySelector(".brief-page__form-contacts")
+    }
+    if (document.querySelector(".submit-box button")) {
+        briefSubmit = document.querySelector(".submit-box button")
+        briefSubmit.addEventListener('click', function () {
+            let result = true
+            briefForm.querySelectorAll("input[required]").forEach(function (el) {
+                if (el.value === '') {
+                    el.focus().classList.add('error-input');
+                    return result = false;
+                } else {
+                    el.classList.remove('error-input');
+                }
+            });
+            if (result === false) {
+                return false
+            } else {
+                if (checkCaptch && grecaptcha.getResponse(1) !== "") {
+                    checkCaptch = false;
+                    let formData = {}
+                    briefForm.querySelectorAll('input, textarea').forEach(el => {
+                        let name = el.getAttribute('name')
+                        if (el.value !== '') {
+                            formData[name] = el.value
+                        }
+                    })
+                    let data = {contacts: formData, answers: answers, 'g-recaptcha-response': grecaptcha.getResponse(1)}
+                    $.ajax({
+                        type: briefForm.getAttribute('method'),
+                        url: briefForm.getAttribute('action'),
+                        data: data,
+                        error: function (jqXHR, textStatus, err) {
+                            grecaptcha.reset(1);
+                            fadeFlash('Ошибка', 'error')
+                        },
+                        beforeSend: function () {
+                            console.log('loading')
+                        },
+                        success: function (result) {
+                            fadeFlash('Успешно отправлено', 'success')
+                            grecaptcha.reset(1);
+                            briefForm.reset();
+                            answers.length = 0
+                            setTimeout(function () {
+                                location.reload()
+                            }, 3000)
+                        }
+                    })
+                    return false;
+                } else {
+                    fadeFlash('Ошибка. Капча не пройдена', 'error')
+                }
+            }
+        })
+    }
 })
 
 function validateInputs(el) {
@@ -150,3 +230,4 @@ function validateInputs(el) {
         }
     }
 }
+

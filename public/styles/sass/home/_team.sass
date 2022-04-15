@@ -1,7 +1,14 @@
 .team
   position: relative
-  height: 800px
+  max-height: 800px
+  min-height: 800px
   background-color: #020202
+  overflow: hidden
+  transition: all 0.8s
+  &-wrapper
+    max-height: 500px
+    overflow: hidden
+    transition: all 0.6s
   .service
     &-title
       z-index: 2
@@ -46,7 +53,17 @@
       font-size: 16px
   &-arrow
     background: none
-    padding: 15px
+    padding: 10px
     box-shadow: -4px -4px 20px rgba(255, 255, 255, 0.14), 4px 4px 20px rgba(0, 0, 0, 0.24)
     border-radius: 100%
-    z-index: 1
+    z-index: 100
+    cursor: pointer
+    transition: all 0.8s
+    width: 64px
+    display: block
+    &__wrapper
+      bottom: 100px
+      left: 50%
+      transform: translateX(-50%)
+      width: 64px
+      padding: 0

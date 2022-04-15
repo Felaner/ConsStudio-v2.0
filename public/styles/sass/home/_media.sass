@@ -57,7 +57,6 @@
 
 
   .team
-    height: 750px
     &-title
       &__background
         background-size: 285px
@@ -160,7 +159,8 @@
 
 
   .team
-    height: 640px
+    max-height: 700px
+    min-height: 700px
     &-title
       font-size: 28px
       &__background
@@ -364,7 +364,10 @@
 
 
   .team
-    height: 640px
+    max-height: 600px
+    min-height: 600px
+    &-wrapper
+      max-height: 380px
     &-title
       font-size: 24px
     &-avatar
@@ -375,7 +378,9 @@
       &__subtitle
         font-size: 14px
     &-arrow
-      padding: 8px
+      padding: 14px
+      &__wrapper
+        width: 62px
       img
         width: 36px
 
@@ -500,7 +505,6 @@
 
 
   .team
-    height: 580px
     &-title
       font-size: 24px
       &__background
@@ -693,6 +697,10 @@
 
   .team
     height: 450px
+    min-height: unset
+    max-height: unset
+    &-wrapper
+      max-height: unset
     &-title
       font-size: 24px
       text-align: center

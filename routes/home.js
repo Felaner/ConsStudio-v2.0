@@ -9,8 +9,10 @@ const {EMAIL_TO, SECRET_KEY} = require('../keys/index');
 
 router.get('/', (req, res) => {
     res.render('home', {
-        title: 'Главная',
-        isHome: true
+        title: 'ConsStudio - студия веб-разработки',
+        isHome: true,
+        description: 'Наша организация специфицируется на создании сайтов. Мы создадим для вас уникальный проект с нуля или же доработаем действующий. У нас работают лучшие специалисты, которые любят свое дело.',
+        robotsContent: 'all'
     });
 });
 

@@ -179,6 +179,53 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         })
     })
+
+    if (document.querySelector('.team-arrow') && window.screen.width > 575) {
+        let maxHeight,
+            maxHeightClose,
+            minHeight,
+            minHeightClose,
+            teamWrapperMaxHeight,
+            staticMaxHeight
+        if (window.screen.width > 1199) {
+            staticMaxHeight = '800px'
+            maxHeight = '2000px'
+            minHeight = '1050px'
+            maxHeightClose = '800px'
+            minHeightClose = '800px'
+            teamWrapperMaxHeight = '500px'
+        } else if (window.screen.width > 991 && window.screen.width < 1200) {
+            staticMaxHeight = '700px'
+            maxHeight = '2000px'
+            minHeight = '950px'
+            maxHeightClose = '700px'
+            minHeightClose = '700px'
+            teamWrapperMaxHeight = '500px'
+        } else if (window.screen.width > 575 && window.screen.width < 992) {
+            staticMaxHeight = '600px'
+            maxHeight = '2000px'
+            minHeight = '850px'
+            maxHeightClose = '600px'
+            minHeightClose = '600px'
+            teamWrapperMaxHeight = '400px'
+        }
+        const button = document.querySelector('.team-arrow')
+        button.addEventListener('click', function (el) {
+            const teamBlock = document.querySelector('.team')
+            const teamWrapper = document.querySelector('.team-wrapper')
+            if (window.getComputedStyle(teamBlock).maxHeight === staticMaxHeight) {
+                teamBlock.style.maxHeight = maxHeight
+                teamBlock.style.minHeight = minHeight
+                teamWrapper.style.maxHeight = '2000px'
+                button.style.transform = 'rotate(180deg)'
+            } else {
+                teamBlock.style.maxHeight = maxHeightClose
+                teamBlock.style.minHeight = minHeightClose
+                teamWrapper.style.maxHeight = teamWrapperMaxHeight
+                button.style.transform = 'rotate(0deg)'
+            }
+        })
+    }
 })
 
 $(function() {
@@ -188,3 +235,4 @@ $(function() {
         duplicated: true
     });
 });
+

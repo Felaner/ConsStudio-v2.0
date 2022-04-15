@@ -6,8 +6,10 @@ const fs = require('fs');
 
 router.get('/', (req, res) => {
     res.render('portfolio', {
-        title: 'Портфолио',
-        isPortfolio: true
+        title: 'Портфолио | ConsStudio',
+        isPortfolio: true,
+        description: 'Портфолио нашей студии. В данном разделе представлены сайты, созданные нашими специалистами. Более подробная информация по каждой работе находится на этой странице.',
+        robotsContent: 'all'
     });
 });
 

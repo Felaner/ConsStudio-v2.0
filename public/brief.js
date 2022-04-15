@@ -1,4 +1,24 @@
-import { lending, siteCard, corporate, store, vitrina, blog } from './quest.js';
+import { lending, siteCard, corporate, store, vitrina, blog, another } from './quest.js';
+
+function fadeFlash(text, type) {
+    const box = document.querySelector('.flash');
+    box.innerHTML = `<p>${text}</p>`
+    if (type === 'success') {
+        box.style.border = '2px solid #14FFEC'
+    } else if (type === 'error') {
+        box.style.border = '2px solid red'
+    }
+    box.classList.remove('animate__slideOutUp')
+    box.style.display = 'block'
+    box.classList.add('animate__slideInDown');
+    setTimeout(function () {
+        box.classList.remove('animate__slideInDown')
+        box.classList.add('animate__slideOutUp')
+        setTimeout(function () {
+            box.style.display = 'none'
+        }, 1200)
+    }, 5000)
+}
 
 let siteTypes = [
     {
@@ -11,10 +31,10 @@ let siteTypes = [
             {text: 'Интернет магазин', obj: store},
             {text: 'Сайт-каталог', obj: vitrina},
             {text: 'Блог', obj: blog},
-            {text: 'Эконом сайт'},
-            {text: 'Дизайн сайта'},
-            {text: 'Редизайн сайта'},
-            {text: 'Другое'},
+            {text: 'Эконом сайт', obj: siteCard},
+            // {text: 'Дизайн сайта'},
+            // {text: 'Редизайн сайта'},
+            {text: 'Другое', obj: another},
         ],
         type: 'radio'
     }
@@ -28,7 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const prev = document.querySelector('.prev-question')
 
         let questNumber = 0
-        let errors = false
         let numInMass = 0
 
         firstQuestion()
@@ -36,6 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         prev.disabled = true
 
         next.addEventListener('click', function () {
+            let errors = false
             let clientAnswer
             let formControl
             let nextQuest = null
@@ -56,20 +76,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 formControl = questBox.querySelector('input[type=text]')
                 if (formControl.value !== '') {
                     clientAnswer = questBox.querySelector('input').value
-                    errors = false
                 } else {
-                    errors = true
+                    clientAnswer = "---"
                 }
             } else if (questBox.querySelector('textarea').value !== '') {
                 formControl = questBox.querySelector('textarea')
                 if (formControl.value !== '') {
                     clientAnswer = questBox.querySelector('textarea').value
-                    errors = false
                 } else {
-                    errors = true
+                    clientAnswer = "---"
                 }
             } else {
-                errors = true
+                clientAnswer = "---"
             }
             if (!errors) {
                 numInMass++
@@ -80,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     questNumber = nextQuest
                 }
             } else {
-                console.log('Ответьте на вопрос')
+                fadeFlash('Пожалуйста, ответьте на вопрос', 'error')
             }
         })
         prev.addEventListener('click', function () {
@@ -181,6 +199,8 @@ function nextQuestion(num, clientAnswer, nextQuest, numInMass) {
     }
 
     if (num > siteType.obj.length) {
+        clientAnswers.push({questNum: siteType.obj[siteType.obj.length - 1].num, quest: question.innerHTML, answ: clientAnswer})
+        window.answers = clientAnswers
         const next = document.querySelector('.next-question')
         const prev = document.querySelector('.prev-question')
         const captcha = document.querySelector('.captcha-box')
@@ -292,7 +312,7 @@ function nextQuestion(num, clientAnswer, nextQuest, numInMass) {
                 checked = 'checked'
             }
             // --> и если ответ уже был, input radio будет выбран
-            questBox.innerHTML += `<div class="col-12 col-md-6"><label><input type="${questType}" name="q${num}" value="${el.text}" ${checked} ${nextQuest}><span>${el.text}</span></label></div>`
+            questBox.innerHTML += `<div class="col-12 col-md-6"><label class="radio-label"><input type="${questType}" name="q${num}" value="${el.text}" ${checked} ${nextQuest}><span class="radio-span">${el.text}</span></label></div>`
         })
     } else if (questType === 'textarea') {
         questBox.innerHTML += `<div class="col-12 d-flex justify-content-center"><textarea>${prevAnsw}</textarea></div>`
@@ -301,5 +321,4 @@ function nextQuestion(num, clientAnswer, nextQuest, numInMass) {
     } else {
         questBox.innerHTML += `<p>Такого типа нет</p>`
     }
-    console.log(clientAnswers)
 }

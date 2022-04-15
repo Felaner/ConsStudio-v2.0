@@ -145,8 +145,8 @@ let siteCard = [
         num: 4,
         question: 'Имеются ли товары или услуги, которые Вы хотите разместить на сайте?',
         answers: [
-            {text: 'Да', questTotal: '10', nextQuest: [5]},
-            {text: 'Нет', questTotal: '11', nextQuest: [7]},
+            {text: 'Да', nextQuest: [5]},
+            {text: 'Нет', nextQuest: [7]},
         ],
         type: 'radio'
     },
@@ -164,8 +164,8 @@ let siteCard = [
         num: 7,
         question: 'Требуются ли услуги копирайтера?',
         answers: [
-            {text: 'Да', questTotal: '10'},
-            {text: 'Нет', questTotal: '11'},
+            {text: 'Да'},
+            {text: 'Нет'},
         ],
         type: 'radio'
     },
@@ -188,8 +188,8 @@ let siteCard = [
         num: 11,
         question: 'Имеется ли у вас фирменный логотип?',
         answers: [
-            {text: 'Да', questTotal: '10'},
-            {text: 'Нет', questTotal: '11'},
+            {text: 'Да'},
+            {text: 'Нет'},
         ],
         type: 'radio'
     },
@@ -197,8 +197,8 @@ let siteCard = [
         num: 12,
         question: 'Есть ли у вас материал для сайта (Фото, текста, акции, сертификаты, благодарственные письма)',
         answers: [
-            {text: 'Да', questTotal: '10', nextQuest: [13]},
-            {text: 'Нет', questTotal: '11', nextQuest: [14]},
+            {text: 'Да', nextQuest: [13]},
+            {text: 'Нет', nextQuest: [14]},
         ],
         type: 'radio'
     },
@@ -211,8 +211,8 @@ let siteCard = [
         num: 14,
         question: 'Требуется ли вам адаптивный дизайн и дизайн под мобильные устройства?',
         answers: [
-            {text: 'Да', questTotal: '10'},
-            {text: 'Нет', questTotal: '11'},
+            {text: 'Да'},
+            {text: 'Нет'},
         ],
         type: 'radio'
     },
@@ -225,8 +225,8 @@ let siteCard = [
         num: 16,
         question: 'Требуется ли дальнейшее администрирование сайта?',
         answers: [
-            {text: 'Да', questTotal: '10'},
-            {text: 'Нет', questTotal: '11'},
+            {text: 'Да'},
+            {text: 'Нет'},
         ],
         type: 'radio'
     },
@@ -249,23 +249,6 @@ let siteCard = [
 
 let corporate = [
     {
-        num: 0,
-        question: 'Какая услуга Вам необходима?(Корпоратив)',
-        answers: [
-            {text: 'Landing-page', questTotal: '10'},
-            {text: 'Сайт-визитка', questTotal: '11'},
-            {text: 'Корпоративный сайт', questTotal: '12'},
-            {text: 'Интернет магазин', questTotal: '13'},
-            {text: 'Сайт-каталог', questTotal: '14'},
-            {text: 'Блог', questTotal: '15'},
-            {text: 'Эконом сайт', questTotal: '16'},
-            {text: 'Дизайн сайта', questTotal: '17'},
-            {text: 'Редизайн сайта', questTotal: '18'},
-            {text: 'Другое', questTotal: '19'},
-        ],
-        type: 'radio'
-    },
-    {
         num: 1,
         question: 'Есть ли доменное имя для Вашего нового сайта?',
         answers: [
@@ -274,11 +257,6 @@ let corporate = [
             {text: 'Нет, домен выберу сам(а)'}
         ],
         type: 'radio'
-    },
-    {
-        num: 1.1,
-        question: 'Укажите ваш будущий домен, если он у вас есть:',
-        type: 'text'
     },
     {
         num: 2,
@@ -294,140 +272,123 @@ let corporate = [
         num: 4,
         question: 'Имеются ли товары или услуги, которые Вы хотите разместить на сайте?',
         answers: [
-            {text: 'Да', questTotal: '10'},
-            {text: 'Нет', questTotal: '11'},
+            {text: 'Да', nextQuest: [5]},
+            {text: 'Нет', nextQuest: [7]},
         ],
         type: 'radio'
     },
     {
-        num: 4.1,
+        num: 5,
         question: 'Опишите свой продукт или услуги с технической стороны:',
         type: 'textarea'
     },
     {
-        num: 4.2,
+        num: 6,
         question: 'Опишите свое УТП (Уникальное торговое предложение), если есть',
         type: 'textarea'
     },
     {
-        num: 5,
+        num: 7,
         question: 'Требуются ли услуги копирайтера?',
         answers: [
-            {text: 'Да', questTotal: '10'},
-            {text: 'Нет', questTotal: '11'},
+            {text: 'Да'},
+            {text: 'Нет'},
         ],
         type: 'radio'
     },
     {
-        num: 6,
+        num: 8,
         question: 'Кто ваша целевая аудитория?',
         type: 'textarea'
     },
     {
-        num: 7,
+        num: 9,
         question: 'Укажитель будущий стиль вашего сайта (например, строгий, магкий, яркий)',
         type: 'textarea'
     },
     {
-        num: 8,
+        num: 10,
         question: 'Укажите цвета, которые вы хотели бы видеть на своем сайте:',
         type: 'textarea'
     },
     {
-        num: 9,
+        num: 11,
         question: 'Имеется ли у вас фирменный логотип?',
         answers: [
-            {text: 'Да', questTotal: '10'},
-            {text: 'Нет', questTotal: '11'},
-        ],
-        type: 'radio'
-    },
-    {
-        num: 10,
-        question: 'Есть ли у вас материал для сайта (Фото, текста, акции, сертификаты, благодарственные письма)',
-        answers: [
-            {text: 'Да', questTotal: '10'},
-            {text: 'Нет', questTotal: '11'},
-        ],
-        type: 'radio'
-    },
-    {
-        num: 10.1,
-        question: 'Перечислите то, что у вас имеется',
-        type: 'textarea'
-    },
-    {
-        num: 11,
-        question: 'Требуется ли вам адаптивный дизайн и дизайн под мобильные устройства?',
-        answers: [
-            {text: 'Да', questTotal: '10'},
-            {text: 'Нет', questTotal: '11'},
+            {text: 'Да'},
+            {text: 'Нет'},
         ],
         type: 'radio'
     },
     {
         num: 12,
-        question: 'Укажите или перечислите сайты ваших конкурентов, чем они выделятся на фоне других?',
-        type: 'textarea'
-    },
-    {
-        num: 13,
-        question: 'Требуется ли вам административная панель для сайта? ',
+        question: 'Есть ли у вас материал для сайта (Фото, текста, акции, сертификаты, благодарственные письма)',
         answers: [
-            {text: 'Да', questTotal: '10'},
-            {text: 'Нет', questTotal: '11'},
+            {text: 'Да', nextQuest: [13]},
+            {text: 'Нет', nextQuest: [14]},
         ],
         type: 'radio'
     },
     {
-        num: 13.1,
-        question: 'Опишите требования к административной панели и ее функционал ',
+        num: 13,
+        question: 'Перечислите то, что у вас имеется',
         type: 'textarea'
     },
     {
         num: 14,
-        question: 'Требуется ли дальнейшее администрирование сайта?',
+        question: 'Требуется ли вам адаптивный дизайн и дизайн под мобильные устройства?',
         answers: [
-            {text: 'Да', questTotal: '10'},
-            {text: 'Нет', questTotal: '11'},
+            {text: 'Да'},
+            {text: 'Нет'},
         ],
         type: 'radio'
     },
     {
         num: 15,
-        question: 'Укажите то, что бы вы точно не хотели видеть на своем сайте',
+        question: 'Укажите или перечислите сайты ваших конкурентов, чем они выделятся на фоне других?',
         type: 'textarea'
     },
     {
         num: 16,
+        question: 'Требуется ли вам административная панель для сайта? ',
+        answers: [
+            {text: 'Да'},
+            {text: 'Нет'},
+        ],
+        type: 'radio'
+    },
+    {
+        num: 17,
+        question: 'Опишите требования к административной панели и ее функционал ',
+        type: 'textarea'
+    },
+    {
+        num: 18,
+        question: 'Требуется ли дальнейшее администрирование сайта?',
+        answers: [
+            {text: 'Да'},
+            {text: 'Нет'},
+        ],
+        type: 'radio'
+    },
+    {
+        num: 19,
+        question: 'Укажите то, что бы вы точно не хотели видеть на своем сайте',
+        type: 'textarea'
+    },
+    {
+        num: 20,
         question: 'Какие страницы нужны на сайте?(Перечислите)',
         type: 'textarea'
     },
     {
-        num: 17,
+        num: 21,
         question: 'Напишите свои дополнительные пожелания к сайту, которые вы не смогли уточнить во время заполнения брифа',
         type: 'textarea'
     }
 ]
 
 let store = [
-    {
-        num: 0,
-        question: 'Какая услуга Вам необходима?(Интернет магазин)',
-        answers: [
-            {text: 'Landing-page', questTotal: '10'},
-            {text: 'Сайт-визитка', questTotal: '11'},
-            {text: 'Корпоративный сайт', questTotal: '12'},
-            {text: 'Интернет магазин', questTotal: '13'},
-            {text: 'Сайт-каталог', questTotal: '14'},
-            {text: 'Блог', questTotal: '15'},
-            {text: 'Эконом сайт', questTotal: '16'},
-            {text: 'Дизайн сайта', questTotal: '17'},
-            {text: 'Редизайн сайта', questTotal: '18'},
-            {text: 'Другое', questTotal: '19'},
-        ],
-        type: 'radio'
-    },
     {
         num: 1,
         question: 'Есть ли доменное имя для Вашего нового сайта?',
@@ -437,11 +398,6 @@ let store = [
             {text: 'Нет, домен выберу сам(а)'}
         ],
         type: 'radio'
-    },
-    {
-        num: 1.1,
-        question: 'Укажите ваш будущий домен, если он у вас есть:',
-        type: 'text'
     },
     {
         num: 2,
@@ -459,144 +415,127 @@ let store = [
         type: 'textarea'
     },
     {
-        num: 4.1,
+        num: 5,
         question: 'Опишите свой продукт или услуги с технической стороны:',
         type: 'textarea'
     },
     {
-        num: 5,
+        num: 6,
         question: 'Требуются ли услуги копирайтера?',
         answers: [
-            {text: 'Да', questTotal: '10'},
-            {text: 'Нет', questTotal: '11'},
+            {text: 'Да'},
+            {text: 'Нет'},
         ],
         type: 'radio'
     },
     {
-        num: 6,
+        num: 7,
         question: 'Кто ваша целевая аудитория?',
         type: 'textarea'
     },
     {
-        num: 7,
+        num: 8,
         question: 'Укажитель будущий стиль вашего сайта (например, строгий, магкий, яркий)',
         type: 'textarea'
     },
     {
-        num: 8,
+        num: 9,
         question: 'Укажите цвета, которые вы хотели бы видеть на своем сайте:',
         type: 'textarea'
     },
     {
-        num: 9,
+        num: 10,
         question: 'Имеется ли у вас фирменный логотип?',
         answers: [
-            {text: 'Да', questTotal: '10'},
-            {text: 'Нет', questTotal: '11'},
+            {text: 'Да'},
+            {text: 'Нет'},
         ],
         type: 'radio'
-    },
-    {
-        num: 10,
-        question: 'Есть ли у вас материал для сайта (Фото, текста, акции, сертификаты, благодарственные письма)',
-        answers: [
-            {text: 'Да', questTotal: '10'},
-            {text: 'Нет', questTotal: '11'},
-        ],
-        type: 'radio'
-    },
-    {
-        num: 10.1,
-        question: 'Перечислите то, что у вас имеется',
-        type: 'textarea'
     },
     {
         num: 11,
-        question: 'Требуется ли вам адаптивный дизайн и дизайн под мобильные устройства?',
+        question: 'Есть ли у вас материал для сайта (Фото, текста, акции, сертификаты, благодарственные письма)',
         answers: [
-            {text: 'Да', questTotal: '10'},
-            {text: 'Нет', questTotal: '11'},
+            {text: 'Да', nextQuest: [12]},
+            {text: 'Нет', nextQuest: [13]},
         ],
         type: 'radio'
     },
     {
         num: 12,
-        question: 'Укажите или перечислите сайты ваших конкурентов, чем они выделятся на фоне других?',
+        question: 'Перечислите то, что у вас имеется',
         type: 'textarea'
     },
     {
         num: 13,
-        question: 'Требуется ли вам административная панель для сайта? ',
+        question: 'Требуется ли вам адаптивный дизайн и дизайн под мобильные устройства?',
         answers: [
-            {text: 'Да', questTotal: '10'},
-            {text: 'Нет', questTotal: '11'},
+            {text: 'Да'},
+            {text: 'Нет'},
         ],
         type: 'radio'
     },
     {
-        num: 13.1,
+        num: 14,
+        question: 'Укажите или перечислите сайты ваших конкурентов, чем они выделятся на фоне других?',
+        type: 'textarea'
+    },
+    {
+        num: 15,
+        question: 'Требуется ли вам административная панель для сайта? ',
+        answers: [
+            {text: 'Да', nextQuest: [16]},
+            {text: 'Нет', nextQuest: [17]},
+        ],
+        type: 'radio'
+    },
+    {
+        num: 16,
         question: 'Опишите требования к административной панели и ее функционал ',
         type: 'textarea'
     },
     {
-        num: 14,
+        num: 17,
         question: 'Требуется ли дальнейшее администрирование сайта?',
         answers: [
-            {text: 'Да', questTotal: '10'},
-            {text: 'Нет', questTotal: '11'},
+            {text: 'Да'},
+            {text: 'Нет'},
         ],
         type: 'radio'
     },
     {
-        num: 15,
+        num: 18,
         question: 'Какую CMS нужно подклчить к сайту?',
         type: 'textarea'
     },
     {
-        num: 16,
+        num: 19,
         question: 'Опишите требования к сетке товаров',
         type: 'textarea'
     },
     {
-        num: 17,
+        num: 20,
         question: 'Опишите требования к странице товаров',
         type: 'textarea'
     },
     {
-        num: 18,
+        num: 21,
         question: 'Укажите то, что бы вы точно не хотели видеть на своем сайте',
         type: 'textarea'
     },
     {
-        num: 19,
+        num: 22,
         question: 'Какие страницы нужны на сайте?(Перечислите)',
         type: 'textarea'
     },
     {
-        num: 20,
+        num: 23,
         question: 'Напишите свои дополнительные пожелания к сайту, которые вы не смогли уточнить во время заполнения брифа',
         type: 'textarea'
     }
 ]
 
 let vitrina = [
-    {
-        num: 0,
-        question: 'Какая услуга Вам необходима?(Интернет каталог)',
-        answers: [
-            {text: 'Landing-page', questTotal: '10'},
-            {text: 'Сайт-визитка', questTotal: '11'},
-            {text: 'Корпоративный сайт', questTotal: '12'},
-            {text: 'Интернет магазин', questTotal: '13'},
-            {text: 'Сайт-каталог', questTotal: '14'},
-            {text: 'Блог', questTotal: '15'},
-            {text: 'Эконом сайт', questTotal: '16'},
-            {text: 'Дизайн сайта', questTotal: '17'},
-            {text: 'Редизайн сайта', questTotal: '18'},
-            {text: 'Другое', questTotal: '19'},
-        ],
-        type: 'radio'
-    },
     {
         num: 1,
         question: 'Есть ли доменное имя для Вашего нового сайта?',
@@ -606,11 +545,6 @@ let vitrina = [
             {text: 'Нет, домен выберу сам(а)'}
         ],
         type: 'radio'
-    },
-    {
-        num: 1.1,
-        question: 'Укажите ваш будущий домен, если он у вас есть:',
-        type: 'text'
     },
     {
         num: 2,
@@ -628,139 +562,122 @@ let vitrina = [
         type: 'textarea'
     },
     {
-        num: 4.1,
+        num: 5,
         question: 'Опишите свой продукт или услуги с технической стороны:',
         type: 'textarea'
     },
     {
-        num: 5,
+        num: 6,
         question: 'Требуются ли услуги копирайтера?',
         answers: [
-            {text: 'Да', questTotal: '10'},
-            {text: 'Нет', questTotal: '11'},
+            {text: 'Да'},
+            {text: 'Нет'},
         ],
         type: 'radio'
     },
     {
-        num: 6,
+        num: 7,
         question: 'Кто ваша целевая аудитория?',
         type: 'textarea'
     },
     {
-        num: 7,
+        num: 8,
         question: 'Укажитель будущий стиль вашего сайта (например, строгий, магкий, яркий)',
         type: 'textarea'
     },
     {
-        num: 8,
+        num: 9,
         question: 'Укажите цвета, которые вы хотели бы видеть на своем сайте:',
         type: 'textarea'
     },
     {
-        num: 9,
+        num: 10,
         question: 'Имеется ли у вас фирменный логотип?',
         answers: [
-            {text: 'Да', questTotal: '10'},
-            {text: 'Нет', questTotal: '11'},
+            {text: 'Да'},
+            {text: 'Нет'},
         ],
         type: 'radio'
-    },
-    {
-        num: 10,
-        question: 'Есть ли у вас материал для сайта (Фото, текста, акции, сертификаты, благодарственные письма)',
-        answers: [
-            {text: 'Да', questTotal: '10'},
-            {text: 'Нет', questTotal: '11'},
-        ],
-        type: 'radio'
-    },
-    {
-        num: 10.1,
-        question: 'Перечислите то, что у вас имеется',
-        type: 'textarea'
     },
     {
         num: 11,
-        question: 'Требуется ли вам адаптивный дизайн и дизайн под мобильные устройства?',
+        question: 'Есть ли у вас материал для сайта (Фото, текста, акции, сертификаты, благодарственные письма)',
         answers: [
-            {text: 'Да', questTotal: '10'},
-            {text: 'Нет', questTotal: '11'},
+            {text: 'Да', nextQuest: [12]},
+            {text: 'Нет', nextQuest: [13]},
         ],
         type: 'radio'
     },
     {
         num: 12,
-        question: 'Укажите или перечислите сайты ваших конкурентов, чем они выделятся на фоне других?',
+        question: 'Перечислите то, что у вас имеется',
         type: 'textarea'
     },
     {
         num: 13,
-        question: 'Требуется ли вам административная панель для сайта? ',
+        question: 'Требуется ли вам адаптивный дизайн и дизайн под мобильные устройства?',
         answers: [
-            {text: 'Да', questTotal: '10'},
-            {text: 'Нет', questTotal: '11'},
+            {text: 'Да'},
+            {text: 'Нет'},
         ],
         type: 'radio'
     },
     {
-        num: 13.1,
+        num: 14,
+        question: 'Укажите или перечислите сайты ваших конкурентов, чем они выделятся на фоне других?',
+        type: 'textarea'
+    },
+    {
+        num: 15,
+        question: 'Требуется ли вам административная панель для сайта? ',
+        answers: [
+            {text: 'Да', nextQuest: [16]},
+            {text: 'Нет', nextQuest: [17]},
+        ],
+        type: 'radio'
+    },
+    {
+        num: 16,
         question: 'Опишите требования к административной панели и ее функционал ',
         type: 'textarea'
     },
     {
-        num: 14,
+        num: 17,
         question: 'Требуется ли дальнейшее администрирование сайта?',
         answers: [
-            {text: 'Да', questTotal: '10'},
-            {text: 'Нет', questTotal: '11'},
+            {text: 'Да'},
+            {text: 'Нет'},
         ],
         type: 'radio'
     },
     {
-        num: 15,
+        num: 18,
         question: 'Опишите требования к сетке товаров',
         type: 'textarea'
     },
     {
-        num: 16,
+        num: 19,
         question: 'Опишите требования к странице товаров',
         type: 'textarea'
     },
     {
-        num: 17,
+        num: 20,
         question: 'Укажите то, что бы вы точно не хотели видеть на своем сайте',
         type: 'textarea'
     },
     {
-        num: 18,
+        num: 21,
         question: 'Какие страницы нужны на сайте?(Перечислите)',
         type: 'textarea'
     },
     {
-        num: 19,
+        num: 22,
         question: 'Напишите свои дополнительные пожелания к сайту, которые вы не смогли уточнить во время заполнения брифа',
         type: 'textarea'
     }
 ]
 
 let blog = [
-    {
-        num: 0,
-        question: 'Какая услуга Вам необходима?(Блог)',
-        answers: [
-            {text: 'Landing-page', questTotal: '10'},
-            {text: 'Сайт-визитка', questTotal: '11'},
-            {text: 'Корпоративный сайт', questTotal: '12'},
-            {text: 'Интернет магазин', questTotal: '13'},
-            {text: 'Сайт-каталог', questTotal: '14'},
-            {text: 'Блог', questTotal: '15'},
-            {text: 'Эконом сайт', questTotal: '16'},
-            {text: 'Дизайн сайта', questTotal: '17'},
-            {text: 'Редизайн сайта', questTotal: '18'},
-            {text: 'Другое', questTotal: '19'},
-        ],
-        type: 'radio'
-    },
     {
         num: 1,
         question: 'Есть ли доменное имя для Вашего нового сайта?',
@@ -770,11 +687,6 @@ let blog = [
             {text: 'Нет, домен выберу сам(а)'}
         ],
         type: 'radio'
-    },
-    {
-        num: 1.1,
-        question: 'Укажите ваш будущий домен, если он у вас есть:',
-        type: 'text'
     },
     {
         num: 2,
@@ -790,8 +702,8 @@ let blog = [
         num: 4,
         question: 'Требуются ли услуги копирайтера?',
         answers: [
-            {text: 'Да', questTotal: '10'},
-            {text: 'Нет', questTotal: '11'},
+            {text: 'Да'},
+            {text: 'Нет'},
         ],
         type: 'radio'
     },
@@ -814,8 +726,8 @@ let blog = [
         num: 8,
         question: 'Имеется ли у вас фирменный логотип?',
         answers: [
-            {text: 'Да', questTotal: '10'},
-            {text: 'Нет', questTotal: '11'},
+            {text: 'Да'},
+            {text: 'Нет'},
         ],
         type: 'radio'
     },
@@ -823,65 +735,73 @@ let blog = [
         num: 9,
         question: 'Есть ли у вас материал для сайта (Фото, текста, акции, сертификаты, благодарственные письма)',
         answers: [
-            {text: 'Да', questTotal: '10'},
-            {text: 'Нет', questTotal: '11'},
+            {text: 'Да', nextQuest: [10]},
+            {text: 'Нет', nextQuest: [11]},
         ],
         type: 'radio'
     },
     {
-        num: 9.1,
+        num: 10,
         question: 'Перечислите то, что у вас имеется',
         type: 'textarea'
     },
     {
-        num: 10,
+        num: 11,
         question: 'Требуется ли вам адаптивный дизайн и дизайн под мобильные устройства?',
         answers: [
-            {text: 'Да', questTotal: '10'},
-            {text: 'Нет', questTotal: '11'},
+            {text: 'Да'},
+            {text: 'Нет'},
         ],
         type: 'radio'
-    },
-    {
-        num: 11,
-        question: 'Требуется ли вам административная панель для сайта? ',
-        answers: [
-            {text: 'Да', questTotal: '10'},
-            {text: 'Нет', questTotal: '11'},
-        ],
-        type: 'radio'
-    },
-    {
-        num: 11.1,
-        question: 'Опишите требования к административной панели и ее функционал ',
-        type: 'textarea'
     },
     {
         num: 12,
-        question: 'Требуется ли дальнейшее администрирование сайта?',
+        question: 'Требуется ли вам административная панель для сайта? ',
         answers: [
-            {text: 'Да', questTotal: '10'},
-            {text: 'Нет', questTotal: '11'},
+            {text: 'Да', nextQuest: [13]},
+            {text: 'Нет', nextQuest: [14]},
         ],
         type: 'radio'
     },
     {
         num: 13,
-        question: 'Укажите то, что бы вы точно не хотели видеть на своем сайте',
+        question: 'Опишите требования к административной панели и ее функционал ',
         type: 'textarea'
     },
     {
         num: 14,
+        question: 'Требуется ли дальнейшее администрирование сайта?',
+        answers: [
+            {text: 'Да'},
+            {text: 'Нет'},
+        ],
+        type: 'radio'
+    },
+    {
+        num: 15,
+        question: 'Укажите то, что бы вы точно не хотели видеть на своем сайте',
+        type: 'textarea'
+    },
+    {
+        num: 16,
         question: 'Какие страницы нужны на сайте?(Перечислите)',
         type: 'textarea'
     },
     {
-        num: 15,
+        num: 17,
         question: 'Напишите свои дополнительные пожелания к сайту, которые вы не смогли уточнить во время заполнения брифа',
         type: 'textarea'
     }
 ]
 
+let another = [
+    {
+        num: 1,
+        question: 'Опишите, что именно вы хотите и мы с вами свяжемся',
+        type: 'textarea'
+    }
+]
+
 export {
-    lending, siteCard, corporate, store, vitrina, blog
+    lending, siteCard, corporate, store, vitrina, blog, another
 }

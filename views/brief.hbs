@@ -9,8 +9,8 @@
                 <p class="brief-page__subtitle">Бриф на разработку сайта поможет нам понять Ваши цели и задачи. Мы будем лучше ориентироваться в Вашем проекте и быстрее оценим стоимость и сроки разработки.</p>
             </div>
             <div class="col-lg-5 col-12 offset-lg-1 d-flex flex-column justify-content-center mb-4">
-                <form class="brief-page__form-contacts row m-0 w-100 p-3" action="">
-<!--                    <h3 class="text-white text-center mt-2 mb-3">Заполните контактные данные</h3>-->
+                <form class="brief-page__form-contacts row m-0 w-100 p-3" action="/brief" method="post">
+                    <h3 class="text-white text-center mt-2 mb-3">Заполните контактные данные</h3>
                     <div class="col-lg-6 col-12">
                         <label for="briefName">Имя *</label>
                         <input class="form-control" type="text" name="briefName" id="briefName" placeholder="Ваше имя" required>
@@ -41,7 +41,7 @@
                     </div>
                     <div class="col-12">
                         <label for="briefGeographic">География работы</label>
-                        <textarea class="form-control" name="briefGeographic" id="briefGeographic" placeholder="Напишите в каких регионах Вы работаете" required></textarea>
+                        <textarea class="form-control" name="briefGeographic" id="briefGeographic" placeholder="Напишите в каких регионах Вы работаете"></textarea>
                     </div>
                 </form>
             </div>
@@ -61,7 +61,7 @@
 
                     </div>
                     <div class="captcha-box row justify-content-center mt-4 d-none">
-                        <div id="grecaptcha1" class="d-flex justify-content-center g-recaptcha" data-widget-id="1"></div>
+                        <div id="grecaptcha1" class="d-flex justify-content-center g-recaptcha" data-widget-id="3"></div>
                     </div>
                     <div class="row justify-content-center mt-4 mb-4">
                         <div class="col-lg-5 col-md-7 d-flex justify-content-around">
