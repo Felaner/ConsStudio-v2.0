@@ -35,18 +35,22 @@
         top: -30px
         font-size: 48px
     &-info
+      .col-sm-6
+        margin-bottom: 20px
       &__first-block
         .service-info__block
           &:after
             left: 5%
       &__block
-        min-height: 150px
+        height: 100%
         overflow: hidden
+
         &:after
           font-size: 100px
           line-height: 255px
           left: 2%
           bottom: 0
+
 
 @media (max-width: 767.98px)
   .service
@@ -54,6 +58,9 @@
       &__background
         top: -25px
         font-size: 36px
+
+    .services-button
+      font-size: 16px
 @media (max-width: 575.98px)
 
   //service
@@ -69,3 +76,5 @@
     &-subtitle
       margin-left: 0
       text-align: center
+    .services-button
+      font-size: 24px
