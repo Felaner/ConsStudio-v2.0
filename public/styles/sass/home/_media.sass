@@ -200,21 +200,10 @@
       position: relative
       padding: 48px 30px
       $border: 1px
-      border: solid $border transparent
+      border: solid $border #14FFEC
       color: #FFF
       background-clip: padding-box
       text-decoration: none
-      &:before
-        content: ''
-        position: absolute
-        top: 0
-        right: 0
-        bottom: 0
-        left: 0
-        z-index: -1
-        margin: -$border
-        border-radius: inherit
-        background: linear-gradient(to bottom, #8839FF, #14FFEC)
       label
         font-family: "Bebas Neue Regular", sans-serif
         margin-bottom: 5px
@@ -226,11 +215,11 @@
         height: 52px
         margin-bottom: 20px
         &::placeholder
-          padding-left: 25px
+          padding-left: 0
           color: rgba(255, 255, 255, 0.6)
           font-size: 14px
       select
-        color: rgba(255, 255, 255, 0.6)
+        color: rgba(255, 255, 255, 1)
       textarea
         border: 1px solid #FEFEFE
         border-radius: 10px
@@ -645,6 +634,11 @@
 
   .skills
     height: 270px
+    #homeSkillsCarousel
+      .carousel-inner
+        height: 120px
+        .carousel-item
+          height: 120px
     .service-title
       font-size: 25.55px
       &__background

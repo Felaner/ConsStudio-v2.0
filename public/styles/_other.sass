@@ -50,7 +50,7 @@ img
         bottom: unset
         transform: translateX(-50%)
   &-input
-    outline: 2px solid red !important
+    border: 2px solid red !important
 
 *
   //outline: 1px solid red
@@ -150,6 +150,25 @@ h1, h2, h3, h4, h5, h6
       margin-right: 0
       transition: 0.4s
 
+@media (max-width: 767.98px)
+  #formModal
+    z-index: 1100
+
+  .modal
+    &-dialog
+      margin-top: 35%
+
+  .modal-backdrop
+    z-index: 1
+    display: none
+
+  .service
+    &-title
+      &__background
+        background-image: none
+        color: #14FFEC
+        -webkit-text-fill-color: unset
+
 .flash
   display: none
   left: 0
@@ -167,6 +186,8 @@ h1, h2, h3, h4, h5, h6
     color: #000000
     text-align: center
     margin: 0
+
+
 
 
 /*@keyframes gradient {*/
