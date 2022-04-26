@@ -34,6 +34,7 @@ const portfolioRoute = require('./routes/portfolio');
 const contactsRoute = require('./routes/contacts');
 const briefRoute = require('./routes/brief');
 const policyRoute = require('./routes/policy');
+const animationRoute = require('./routes/animation');
 
 const landingRoute = require('./routes/services/landing');
 const siteCardRoute = require('./routes/services/siteCard');
@@ -127,6 +128,7 @@ app.use('/portfolio', portfolioRoute);
 app.use('/contacts', contactsRoute);
 app.use('/brief', briefRoute);
 app.use('/policy', policyRoute);
+app.use('/animation', animationRoute);
 
 app.use('/landing', landingRoute);
 app.use('/site-card', siteCardRoute);
