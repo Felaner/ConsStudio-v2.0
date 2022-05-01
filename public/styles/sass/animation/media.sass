@@ -25,6 +25,9 @@
         &__background
           font-size: 56px
           bottom: -21px
+
+    .universal__button-circle
+      padding-right: 100px
     &-circle
       right: 100px
       width: 560px
@@ -34,6 +37,59 @@
 
 @media (max-width: 991.98px)
 
+  .animation
+    margin: 150px 0
+    &-title
+      position: relative
+    .service
+      &-title
+        font-size: 25px
+        overflow: hidden
+        height: 60px
+        position: absolute
+        right: 0
+        top: -60px
+        &__background
+          font-size: 56px
+          bottom: -21px
+          overflow: hidden
+          height: 84px
+          position: absolute
+          right: 0
+          left: unset
+    &-circle
+      right: 100px
+      width: 560px
+      height: 560px
+    .main-subtitle
+      width: 100%
+      overflow: hidden
+      height: 42px
+      position: absolute
+      right: 0
+
+
+    .animated-text__in
+      animation: animated-text-in 2s steps(17,end) 1s 1 normal both
+    .animated-text__out
+      animation: animated-text-out 2s steps(17,end) 1s 1 normal both
+
+
 @media (max-width: 767.98px)
 
 @media (max-width: 575.98px)
+
+
+
+
+@keyframes animated-text-in
+  from
+    width: 0
+  to
+    width: 100%
+
+@keyframes animated-text-out
+  from
+    width: 100%
+  to
+    width: 0

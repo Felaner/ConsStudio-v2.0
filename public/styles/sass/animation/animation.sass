@@ -19,11 +19,15 @@
     border: solid 1px #14FFEC
     border-radius: 100%
     background: none
+
+  .universal__button-circle
+    padding-right: 127px
+
   &-title
     position: absolute
     top: 50%
     transform: translateY(-50%)
-  &-title1
+  &-title1, &-title2, &-title3, &-title4
     position: absolute
     top: 50%
     transform: translateY(-50%) rotate(0.5turn) scale(0)
@@ -47,14 +51,14 @@
 
 @keyframes turnOut
   to
-    transform: translateX(10px) rotate(0.5turn) scale(0)
+    transform: translateX(0px) rotate(0.5turn) scale(0)
     opacity: 0
 
 @keyframes turnIn
   to
-    transform: translateX(10px) rotate(1turn) scale(1)
+    transform: translateX(0px) rotate(1turn) scale(1)
     opacity: 1
-    top: 35%
+    top: 26.5%
 
 @keyframes circle
   to
