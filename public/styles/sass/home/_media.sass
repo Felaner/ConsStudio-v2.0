@@ -234,17 +234,48 @@
 
 @media (max-width: 991.98px)
   .main
+    .animated-text__wrapper
+      height: 165px
     .service
       &-title
+        position: absolute
+        right: 0
+        white-space: nowrap
         &__background
           font-size: 60px
-          bottom: -25px
+          bottom: -112px
+          white-space: nowrap
+          text-align: end
+    &-subtitle
+      position: absolute
+      right: 0
+      top: 95px
+      height: 96px
     &-button
       width: auto
       right: unset
       left: 50%
       transform: translateX(-50%)
       bottom: -100px
+
+
+
+  .animated-text__in
+    animation: animated-text-in 2s steps(50,end) 1s 1 normal both
+  .animated-text__out
+    animation: animated-text-out 2s steps(50,end) 1s 1 normal both
+
+  @keyframes animated-text-in
+    from
+      width: 0
+    to
+      width: 100%
+
+  @keyframes animated-text-out
+    from
+      width: 100%
+    to
+      width: 0
 
 
   .developing
@@ -407,11 +438,13 @@
 
 @media (max-width: 767.98px)
   .main
+    .animated-text__wrapper
+      height: 180px
     .service
       &-title
         &__background
           font-size: 48px
-          bottom: -18px
+          bottom: -88px
     &-subtitle
       font-size: 14px
     &-button
@@ -553,19 +586,19 @@
 
 @media (max-width: 575.98px)
   .main
+    .animated-text__wrapper
+      margin: 0 4%
+      width: 92%
     .service
       &-title
-        position: relative
+        //position: relative
         z-index: 2
-        &__wrapper
-          margin-right: 15px
         &__background
-          bottom: -20px
-          right: 0
-          left: unset
           z-index: 1
+          left: unset
+          right: 0
           transform: unset
-    position: relative
+    //position: relative
     padding-bottom: 100px
     .container
       padding-top: 110px
@@ -590,17 +623,17 @@
           width: 100%
           height: 100%
           background: rgba(2, 3, 28, 0.5)
-    &-title
-      font-size: 26px
-      letter-spacing: 3px
-      padding: 0 15px
-      &__background
-        background-size: 210px
-        background-position-y: 54px
-        background-position-x: calc(100% - 15px)
-    &-subtitle
-      padding: 0 15px
-      font-size: 14px
+    //&-title
+    //  font-size: 26px
+    //  letter-spacing: 3px
+    //  padding: 0 15px
+    //  &__background
+    //    background-size: 210px
+    //    background-position-y: 54px
+    //    background-position-x: calc(100% - 15px)
+    //&-subtitle
+    //  padding: 0 15px
+    //  font-size: 14px
     &-button
       width: auto
       right: unset

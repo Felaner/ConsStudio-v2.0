@@ -1,0 +1,5 @@
+User-agent: *
+Allow: *
+Disallow: /portfolio
+Disallow: /policy
+sitemap: https://consstudio.ru/sitemap.xml
